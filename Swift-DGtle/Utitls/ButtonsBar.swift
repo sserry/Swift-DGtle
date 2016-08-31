@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol ButtonsBarDelegate {
+    func buttonsBarDidSelectedindex(index: Int?)
+}
+
 class ButtonsBar: UIView {
  
     private let buttonW: CGFloat = 66
@@ -16,6 +20,7 @@ class ButtonsBar: UIView {
     private var underline: UIView = UIView()
     private var titlesArray: [String] = []
     private var margin: CGFloat = 0
+    var delegate: ButtonsBarDelegate?
     var buttonsList: [UIButton] = []
     var lineH: CGFloat = 2.4
     var normalColor: UIColor = UIColor.colorWithHexString("9A9A9A")
@@ -72,6 +77,9 @@ extension ButtonsBar: SDGRadioButtonProtocol {
     func radioButtonDidSelectedIndex(index: Int?) {
         let lineMar = (self.gg_w - CGFloat(buttonsList.count) * buttonW) / CGFloat(buttonsList.count - 1)
         if let idx = index {
+            if let dlg = delegate {
+                dlg.buttonsBarDidSelectedindex(index)
+            }
             UIView.animateWithDuration(0.2) { [unowned self] in
                 self.underline.gg_x = CGFloat(idx) * (self.buttonW + lineMar)
             }
