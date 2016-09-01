@@ -3,7 +3,7 @@
 //  Swift-DGtle
 //
 //  Created by apple on 16/8/26.
-//  Copyright © 2016年 luminia. All rights reserved.
+//  Copyright © 2016 luminia. All rights reserved.
 //
 
 import UIKit
@@ -16,7 +16,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         let window = UIWindow(frame: UIScreen.mainScreen().bounds)
-        window.rootViewController = SDGTabBarController()
+        
+        window.rootViewController = SDGTabController()
         window.makeKeyAndVisible()
         return true
     }

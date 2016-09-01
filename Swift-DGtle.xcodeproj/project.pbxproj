@@ -26,15 +26,10 @@
 		181C60611D702A9E003356E4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181C60601D702A9E003356E4 /* Constants.swift */; };
 		181C60621D702A9E003356E4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181C60601D702A9E003356E4 /* Constants.swift */; };
 		181C60631D702A9E003356E4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181C60601D702A9E003356E4 /* Constants.swift */; };
-		181C60651D702B21003356E4 /* SDGTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181C60641D702B21003356E4 /* SDGTabBarController.swift */; };
-		181C60661D702B21003356E4 /* SDGTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181C60641D702B21003356E4 /* SDGTabBarController.swift */; };
-		181C60671D702B21003356E4 /* SDGTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181C60641D702B21003356E4 /* SDGTabBarController.swift */; };
 		181C60691D702BD2003356E4 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 181C60681D702BD2003356E4 /* Podfile */; };
 		181C606A1D702BD2003356E4 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 181C60681D702BD2003356E4 /* Podfile */; };
 		181C606B1D702BD2003356E4 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 181C60681D702BD2003356E4 /* Podfile */; };
 		181C606F1D703029003356E4 /* SDGHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181C606E1D703029003356E4 /* SDGHomeViewController.swift */; };
-		181C60711D703055003356E4 /* SDGGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181C60701D703055003356E4 /* SDGGroupViewController.swift */; };
-		181C60731D70306D003356E4 /* SDGMsgViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181C60721D70306D003356E4 /* SDGMsgViewController.swift */; };
 		181C60751D70307F003356E4 /* SDGMineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181C60741D70307F003356E4 /* SDGMineViewController.swift */; };
 		181C60771D703625003356E4 /* UIColorExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181C60761D703625003356E4 /* UIColorExt.swift */; };
 		181C60781D703625003356E4 /* UIColorExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181C60761D703625003356E4 /* UIColorExt.swift */; };
@@ -91,6 +86,8 @@
 		18857C441D7873450008661B /* SDGGroupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18857C421D7873450008661B /* SDGGroupTableViewCell.swift */; };
 		18857C451D7873450008661B /* SDGGroupTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18857C431D7873450008661B /* SDGGroupTableViewCell.xib */; };
 		18857C481D7873BC0008661B /* SDGGroupCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18857C471D7873BC0008661B /* SDGGroupCellModel.swift */; };
+		18857C4C1D789D3C0008661B /* SDGPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18857C4B1D789D3C0008661B /* SDGPageViewController.swift */; };
+		18857C4E1D78A1080008661B /* SDGTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18857C4D1D78A1080008661B /* SDGTabController.swift */; };
 		18B339EF1D73E00A00683893 /* SDGUserUnloginHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B339EE1D73E00A00683893 /* SDGUserUnloginHeader.swift */; };
 		18B339F11D73E07800683893 /* SDGUserUnloginHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18B339F01D73E07800683893 /* SDGUserUnloginHeader.xib */; };
 		18B339F31D74116900683893 /* ButtonsBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B339F21D74116900683893 /* ButtonsBar.swift */; };
@@ -129,11 +126,8 @@
 		181C60421D70299B003356E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		181C60431D70299B003356E4 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		181C60601D702A9E003356E4 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		181C60641D702B21003356E4 /* SDGTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDGTabBarController.swift; sourceTree = "<group>"; };
 		181C60681D702BD2003356E4 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		181C606E1D703029003356E4 /* SDGHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDGHomeViewController.swift; sourceTree = "<group>"; };
-		181C60701D703055003356E4 /* SDGGroupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDGGroupViewController.swift; sourceTree = "<group>"; };
-		181C60721D70306D003356E4 /* SDGMsgViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDGMsgViewController.swift; sourceTree = "<group>"; };
 		181C60741D70307F003356E4 /* SDGMineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDGMineViewController.swift; sourceTree = "<group>"; };
 		181C60761D703625003356E4 /* UIColorExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExt.swift; sourceTree = "<group>"; };
 		181C607A1D703FEA003356E4 /* SDGNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDGNavigationController.swift; sourceTree = "<group>"; };
@@ -163,6 +157,8 @@
 		18857C421D7873450008661B /* SDGGroupTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDGGroupTableViewCell.swift; sourceTree = "<group>"; };
 		18857C431D7873450008661B /* SDGGroupTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SDGGroupTableViewCell.xib; sourceTree = "<group>"; };
 		18857C471D7873BC0008661B /* SDGGroupCellModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDGGroupCellModel.swift; sourceTree = "<group>"; };
+		18857C4B1D789D3C0008661B /* SDGPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDGPageViewController.swift; sourceTree = "<group>"; };
+		18857C4D1D78A1080008661B /* SDGTabController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDGTabController.swift; sourceTree = "<group>"; };
 		18B339EE1D73E00A00683893 /* SDGUserUnloginHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDGUserUnloginHeader.swift; sourceTree = "<group>"; };
 		18B339F01D73E07800683893 /* SDGUserUnloginHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SDGUserUnloginHeader.xib; sourceTree = "<group>"; };
 		18B339F21D74116900683893 /* ButtonsBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonsBar.swift; sourceTree = "<group>"; };
@@ -327,8 +323,9 @@
 		181C605A1D702A3D003356E4 /* CommonControllers */ = {
 			isa = PBXGroup;
 			children = (
-				181C60641D702B21003356E4 /* SDGTabBarController.swift */,
 				181C607A1D703FEA003356E4 /* SDGNavigationController.swift */,
+				18857C4B1D789D3C0008661B /* SDGPageViewController.swift */,
+				18857C4D1D78A1080008661B /* SDGTabController.swift */,
 			);
 			path = CommonControllers;
 			sourceTree = "<group>";
@@ -348,7 +345,6 @@
 			children = (
 				18857C461D7873980008661B /* model */,
 				18857C411D7873290008661B /* widget */,
-				181C60701D703055003356E4 /* SDGGroupViewController.swift */,
 				18857C2C1D75D21B0008661B /* SDGGroupLeftChildViewController.swift */,
 				18857C2E1D75D2280008661B /* SDGGroupRightChildViewController.swift */,
 			);
@@ -368,7 +364,6 @@
 		181C605E1D702A3D003356E4 /* Message */ = {
 			isa = PBXGroup;
 			children = (
-				181C60721D70306D003356E4 /* SDGMsgViewController.swift */,
 				18857C351D772E2B0008661B /* SDGMsgCommentChildViewController.swift */,
 				18857C371D772E410008661B /* SDGMsgLikeChildViewController.swift */,
 				18857C391D772E7F0008661B /* SDGMsgPrivateChildViewControlle.swift */,
@@ -663,7 +658,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				181EB8611D7181470005B991 /* SDGHomeTableHeader.swift in Sources */,
-				181C60711D703055003356E4 /* SDGGroupViewController.swift in Sources */,
 				181C60771D703625003356E4 /* UIColorExt.swift in Sources */,
 				181C606F1D703029003356E4 /* SDGHomeViewController.swift in Sources */,
 				181EB8831D71FF430005B991 /* UINavigationBarExt.swift in Sources */,
@@ -675,22 +669,22 @@
 				181C60451D70299B003356E4 /* AppDelegate.swift in Sources */,
 				18B33A371D74778B00683893 /* SDGRadioButtonProtocol.swift in Sources */,
 				181EB87F1D71F0270005B991 /* SDTableCellConfigureProtocol.swift in Sources */,
-				181C60651D702B21003356E4 /* SDGTabBarController.swift in Sources */,
 				18857C2F1D75D2280008661B /* SDGGroupRightChildViewController.swift in Sources */,
 				18857C381D772E410008661B /* SDGMsgLikeChildViewController.swift in Sources */,
 				181C60611D702A9E003356E4 /* Constants.swift in Sources */,
 				18857C3A1D772E7F0008661B /* SDGMsgPrivateChildViewControlle.swift in Sources */,
 				181EB8651D718BAC0005B991 /* UILabelExt.swift in Sources */,
 				181EB87A1D71EEE50005B991 /* HomeArticalModel.swift in Sources */,
+				18857C4C1D789D3C0008661B /* SDGPageViewController.swift in Sources */,
 				18857C2D1D75D21B0008661B /* SDGGroupLeftChildViewController.swift in Sources */,
 				18857C441D7873450008661B /* SDGGroupTableViewCell.swift in Sources */,
-				181C60731D70306D003356E4 /* SDGMsgViewController.swift in Sources */,
 				181EB8591D7164740005B991 /* SDGRereshHeader.swift in Sources */,
 				18857C481D7873BC0008661B /* SDGGroupCellModel.swift in Sources */,
 				181EB8881D7286980005B991 /* SDGZoomHeaderTableView.swift in Sources */,
 				181EB8631D718AC00005B991 /* LayoutExt.swift in Sources */,
 				181EB8911D72AD910005B991 /* SDGUserTableViewCell.swift in Sources */,
 				18B339F31D74116900683893 /* ButtonsBar.swift in Sources */,
+				18857C4E1D78A1080008661B /* SDGTabController.swift in Sources */,
 				181C607B1D703FEA003356E4 /* SDGNavigationController.swift in Sources */,
 				181EB8551D715AC50005B991 /* UIBarButtonItemExt.swift in Sources */,
 				18857C341D771AE70008661B /* SDGPageProtocol.swift in Sources */,
@@ -711,7 +705,6 @@
 				181EB8921D72AD910005B991 /* SDGUserTableViewCell.swift in Sources */,
 				181EB8731D719E790005B991 /* SDGHomeTableViewCell.swift in Sources */,
 				181EB8891D7286980005B991 /* SDGZoomHeaderTableView.swift in Sources */,
-				181C60661D702B21003356E4 /* SDGTabBarController.swift in Sources */,
 				181C60781D703625003356E4 /* UIColorExt.swift in Sources */,
 				181EB87B1D71EEE50005B991 /* HomeArticalModel.swift in Sources */,
 				181C607C1D703FEA003356E4 /* SDGNavigationController.swift in Sources */,
@@ -734,7 +727,6 @@
 				181EB8931D72AD910005B991 /* SDGUserTableViewCell.swift in Sources */,
 				181EB8741D719E790005B991 /* SDGHomeTableViewCell.swift in Sources */,
 				181EB88A1D7286980005B991 /* SDGZoomHeaderTableView.swift in Sources */,
-				181C60671D702B21003356E4 /* SDGTabBarController.swift in Sources */,
 				181C60791D703625003356E4 /* UIColorExt.swift in Sources */,
 				181EB87C1D71EEE50005B991 /* HomeArticalModel.swift in Sources */,
 				181C607D1D703FEA003356E4 /* SDGNavigationController.swift in Sources */,

@@ -1,18 +1,19 @@
 //
-//  SDGTabBarController.swift
+//  SDGTabController.swift
 //  Swift-DGtle
 //
-//  Created by apple on 16/8/26.
-//  Copyright © 2016年 luminia. All rights reserved.
+//  Created by apple on 16/9/2.
+//  Copyright © 2016 luminia. All rights reserved.
 //
 
 import UIKit
 
-class SDGTabBarController: UITabBarController {
+class SDGTabController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureViewControllers()
+
+        configureViewControllers() 
     }
     
     func configureViewControllers() {
@@ -21,12 +22,19 @@ class SDGTabBarController: UITabBarController {
         homeVC.tabBarItem = homeBarItem
         let homeNavVC = SDGNavigationController(rootViewController: homeVC)
         
-        let groupVC = SDGGroupViewController()
+        let bar = ButtonsBar(frame: CGRectMake(0, 0, 180, 44), titlesArray: ["精选", "发现"], buttonMargin: 84)
+        let leftVC = SDGGroupLeftChildViewController()
+        let rightVC = SDGGroupRightChildViewController()
+        let groupVC = SDGPageViewController(bottonBar: bar, viewControllers: [leftVC, rightVC])
         let groupBarItem = UITabBarItem(title: "小组", image: UIImage(named: "tab_group"), selectedImage: UIImage(named: "tab_group_act"))
         groupVC.tabBarItem = groupBarItem
         let groupNavVC = SDGNavigationController(rootViewController: groupVC)
         
-        let msgVC = SDGMsgViewController()
+        let msVC = SDGMsgCommentChildViewController()
+        let likeVC = SDGMsgLikeChildViewController()
+        let pmVC = SDGMsgPrivateChildViewControlle()
+        let btnBar = ButtonsBar(frame: CGRectMake(0, 0, 205, 44), titlesArray: ["评论", "赞", "私信"], buttonMargin: 38)
+        let msgVC = SDGPageViewController(bottonBar: btnBar, viewControllers: [msVC, likeVC, pmVC])
         let msgBarItem = UITabBarItem(title: "消息", image: UIImage(named: "tab_inbox"), selectedImage: UIImage(named: "tab_inbox_act"))
         msgVC.tabBarItem = msgBarItem
         let msgNavVC = SDGNavigationController(rootViewController: msgVC)
@@ -37,5 +45,6 @@ class SDGTabBarController: UITabBarController {
         
         viewControllers = [homeNavVC, groupNavVC, msgNavVC, mineNavVC]
     }
-    
+
+
 }

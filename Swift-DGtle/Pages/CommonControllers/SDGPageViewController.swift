@@ -1,32 +1,38 @@
 //
-//  SDGGroupViewController.swift
+//  SDGPageViewController.swift
 //  Swift-DGtle
 //
-//  Created by apple on 16/8/26.
+//  Created by apple on 16/9/2.
 //  Copyright © 2016年 luminia. All rights reserved.
 //
 
 import UIKit
 
-class SDGGroupViewController: UIViewController, SDGPageProtocol {
+class SDGPageViewController: UIViewController, SDGPageProtocol {
     
-    let buttonsBar = ButtonsBar(frame: CGRectMake(0, 0, 180, 44), titlesArray: ["精选", "发现"], buttonMargin: 84)
-    let leftVC = SDGGroupLeftChildViewController()
-    let rightVC = SDGGroupRightChildViewController()
-    var vcArray: [UIViewController] {
-        return [leftVC, rightVC]
-    }
+    var buttonsBar = ButtonsBar()
+//    var buttonsBar = ButtonsBar(frame: CGRectMake(0, 0, 180, 44), titlesArray: ["精选", "发现"], buttonMargin: 84)
+//    let leftVC = SDGGroupLeftChildViewController()
+//    let rightVC = SDGGroupRightChildViewController()
+    
+    var vcArray: [UIViewController] = []
     var curContentX: CGFloat = 0.0
     var horizentalScrollView = UIScrollView(frame: CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT))
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupControllers()
     }
+    
+    convenience init(bottonBar: ButtonsBar, viewControllers: [UIViewController]) {
+        self.init()
+        self.buttonsBar = bottonBar
+        self.vcArray = viewControllers
+    }
 
 }
 
-extension SDGGroupViewController: UIScrollViewDelegate {
+extension SDGPageViewController: UIScrollViewDelegate {
     func scrollViewDidEndDecelerating(scrollView: UIScrollView)  {
         guard scrollView.contentOffset.x % SCREEN_WIDTH == 0 else {
             return
@@ -45,10 +51,10 @@ extension SDGGroupViewController: UIScrollViewDelegate {
         let cx = scrollView.contentOffset.x
         buttonsBar.scrollUnderlineXPercentageTo(cx / SCREEN_WIDTH / CGFloat(vcArray.count - 1))
     }
-
+    
 }
 
-extension SDGGroupViewController: ButtonsBarDelegate {
+extension SDGPageViewController: ButtonsBarDelegate {
     
     
     func buttonsBarDidSelectedindex(index: Int?)  {
