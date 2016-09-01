@@ -8,41 +8,42 @@
 
 import UIKit
 
-
 protocol SDGPageProtocol: class {
     var vcArray: [UIViewController] { get }
-    var horizentalScrollView: UIScrollView? { get set }
+    var horizentalScrollView: UIScrollView { get }
+    var curContentX: CGFloat { get set }
+    var buttonsBar: ButtonsBar { get }
 }
 
-extension SDGPageProtocol where Self: UIScrollViewDelegate, Self: UIViewController {
-    var _horizentalScrollView: UIScrollView? {
-        get {
-            if horizentalScrollView == nil {
-                let scrollView = UIScrollView(frame: CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT))
-                scrollView.pagingEnabled = true
-                scrollView.directionalLockEnabled = true
-                scrollView.showsVerticalScrollIndicator = false
-                scrollView.showsHorizontalScrollIndicator = false
-                scrollView.delegate = self
-                scrollView.bounces = false
-                for i in vcArray.indices {
-                    vcArray[i].view.frame = CGRectMake(CGFloat(i) * SCREEN_WIDTH, 0, SCREEN_WIDTH, SCREEN_HEIGHT)
-                    scrollView.addSubview(vcArray[i].view)
-                }
-                scrollView.contentSize = CGSizeMake(SCREEN_WIDTH * CGFloat(vcArray.count), SCREEN_HEIGHT)
-                horizentalScrollView = scrollView
-            }
-            return horizentalScrollView
-        }
-    }
-    
+extension SDGPageProtocol where Self: UIScrollViewDelegate, Self: UIViewController, Self: ButtonsBarDelegate {
+
     func setupControllers() {
+        view.backgroundColor = GLOBAL_GRAY_LIGHT
+        
+        navigationItem.titleView = buttonsBar
+        buttonsBar.delegate = self
+        
         for controller in vcArray {
             addChildViewController(controller)
         }
-        if let hrView = _horizentalScrollView {
-            view.addSubview(hrView)
+        automaticallyAdjustsScrollViewInsets = false
+        horizentalScrollView.pagingEnabled = true
+        horizentalScrollView.bounces = false
+        horizentalScrollView.delaysContentTouches = true
+        horizentalScrollView.directionalLockEnabled = true
+        horizentalScrollView.showsVerticalScrollIndicator = false
+        horizentalScrollView.showsHorizontalScrollIndicator = false
+        horizentalScrollView.alwaysBounceVertical = false
+
+        for i in vcArray.indices {
+            vcArray[i].view.frame = CGRectMake(CGFloat(i) * SCREEN_WIDTH, 0, SCREEN_WIDTH, SCREEN_HEIGHT)
+            horizentalScrollView.addSubview(vcArray[i].view)
         }
+        horizentalScrollView.contentSize = CGSizeMake(SCREEN_WIDTH * CGFloat(vcArray.count), horizentalScrollView.gg_h)
+        view.addSubview(horizentalScrollView)
+        horizentalScrollView.delegate = self
+        
     }
+
 }
 

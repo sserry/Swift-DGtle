@@ -26,10 +26,14 @@ class SDGTableView: UITableView {
         
     }
     
-    convenience init(frame: CGRect, aDelegete: UITableViewDelegate, aDataSource: UITableViewDataSource) {
+    convenience init(frame: CGRect, aDelegete: AnyObject) {
         self.init(frame: frame, style: .Grouped)
-        self.delegate = aDelegete
-        self.dataSource = aDataSource
+        if let dlg = aDelegete as? UITableViewDelegate,
+            let dsc = aDelegete as? UITableViewDataSource {
+            self.delegate = dlg
+            self.dataSource = dsc
+        }
+
     }
     
 }

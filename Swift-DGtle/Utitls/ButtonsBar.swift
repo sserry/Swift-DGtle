@@ -26,6 +26,14 @@ class ButtonsBar: UIView {
     var normalColor: UIColor = UIColor.colorWithHexString("9A9A9A")
     var selectedColor: UIColor = SDGBlue
     
+    private var barLeftMar: CGFloat {
+        return SCREEN_WIDTH - self.gg_w / 2
+    }
+    
+    private var underlineRange: CGFloat {
+        return self.gg_w - buttonW
+    }
+    
     override func drawRect(rect: CGRect) {
         super.drawRect(rect)
         
@@ -70,20 +78,18 @@ extension ButtonsBar {
         selectedIndex = buttonsList.indexOf(sender)
     }
     
+    func scrollUnderlineXPercentageTo(x: CGFloat) {        
+        underline.gg_x = underlineRange * x
+    }
+    
 }
 
 extension ButtonsBar: SDGRadioButtonProtocol {
     
-    func radioButtonDidSelectedIndex(index: Int?) {
-        let lineMar = (self.gg_w - CGFloat(buttonsList.count) * buttonW) / CGFloat(buttonsList.count - 1)
-        if let idx = index {
-            if let dlg = delegate {
-                dlg.buttonsBarDidSelectedindex(index)
-            }
-            UIView.animateWithDuration(0.2) { [unowned self] in
-                self.underline.gg_x = CGFloat(idx) * (self.buttonW + lineMar)
-            }
-            
+    func radioButtonDidSelectedIndex(index: Int?) {   
+        if let dlg = delegate {
+            dlg.buttonsBarDidSelectedindex(index)
         }
     }
+        
 }

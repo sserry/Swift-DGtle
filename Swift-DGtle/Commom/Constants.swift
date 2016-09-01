@@ -17,6 +17,7 @@ let RESIZE_FACTOR                           = SCREEN_WIDTH / 375.0
 
 let SINGLE_LINE_WIDTH                       = 1 / UIScreen.mainScreen().scale
 let NAV_BAR_H: CGFloat                      = 64.0
+let TAB_BAR_H: CGFloat                      = 50.0
 let DEFAULT_CELL_HEIGHT: CGFloat            = 44.0
 let DEFAULT_TABLE_VIEW_HEADER_H: CGFloat    = 14
 

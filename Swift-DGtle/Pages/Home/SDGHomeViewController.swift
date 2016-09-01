@@ -31,7 +31,7 @@ class SDGHomeViewController: UIViewController {
     
     func setTableView() {
         
-        let mainTableView = SDGTableView(frame: view.frame, aDelegete: self, aDataSource: self)
+        let mainTableView = SDGTableView(frame: view.frame, aDelegete: self)
         view.addSubview(mainTableView)
         mainTableView.snp_makeConstraints { $0.edges.equalToSuperview() }
         mainTableView.registerNib(UINib(nibName: "SDGHomeTableViewCell", bundle: NSBundle.mainBundle()), forCellReuseIdentifier: SDGHomeTableViewCell.cellReuseIdentifier)
