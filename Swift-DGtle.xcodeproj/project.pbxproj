@@ -92,6 +92,7 @@
 		18B339F11D73E07800683893 /* SDGUserUnloginHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18B339F01D73E07800683893 /* SDGUserUnloginHeader.xib */; };
 		18B339F31D74116900683893 /* ButtonsBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B339F21D74116900683893 /* ButtonsBar.swift */; };
 		18B33A371D74778B00683893 /* SDGRadioButtonProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B33A361D74778B00683893 /* SDGRadioButtonProtocol.swift */; };
+		18E633561D9994B90056097C /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18E633551D9994B90056097C /* SnapKit.framework */; };
 		E3D4981F455A99ACB7EF819B /* Pods_Swift_DGtle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D35FAD27BF6BD69747611CBC /* Pods_Swift_DGtle.framework */; };
 /* End PBXBuildFile section */
 
@@ -163,6 +164,7 @@
 		18B339F01D73E07800683893 /* SDGUserUnloginHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SDGUserUnloginHeader.xib; sourceTree = "<group>"; };
 		18B339F21D74116900683893 /* ButtonsBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonsBar.swift; sourceTree = "<group>"; };
 		18B33A361D74778B00683893 /* SDGRadioButtonProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDGRadioButtonProtocol.swift; sourceTree = "<group>"; };
+		18E633551D9994B90056097C /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = "Pods/../build/Debug-iphoneos/SnapKit/SnapKit.framework"; sourceTree = "<group>"; };
 		511200771F8432010F6ED289 /* Pods-Swift-DGtle.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift-DGtle.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Swift-DGtle/Pods-Swift-DGtle.debug.xcconfig"; sourceTree = "<group>"; };
 		6D7AB22051D18A3E743DB01C /* Pods-Swift-DGtle.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift-DGtle.release.xcconfig"; path = "Pods/Target Support Files/Pods-Swift-DGtle/Pods-Swift-DGtle.release.xcconfig"; sourceTree = "<group>"; };
 		D35FAD27BF6BD69747611CBC /* Pods_Swift_DGtle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Swift_DGtle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -173,6 +175,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18E633561D9994B90056097C /* SnapKit.framework in Frameworks */,
 				E3D4981F455A99ACB7EF819B /* Pods_Swift_DGtle.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -439,6 +442,7 @@
 		99578595C7E95866DEF5ACF8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				18E633551D9994B90056097C /* SnapKit.framework */,
 				D35FAD27BF6BD69747611CBC /* Pods_Swift_DGtle.framework */,
 			);
 			name = Frameworks;
@@ -519,21 +523,24 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = luminia;
 				TargetAttributes = {
 					181C60051D702849003356E4 = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = KD8LY4XN2R;
+						LastSwiftMigration = 0800;
 					};
 					181C60191D702849003356E4 = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = KD8LY4XN2R;
+						LastSwiftMigration = 0800;
 						TestTargetID = 181C60051D702849003356E4;
 					};
 					181C60241D702849003356E4 = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = KD8LY4XN2R;
+						LastSwiftMigration = 0800;
 						TestTargetID = 181C60051D702849003356E4;
 					};
 				};
@@ -786,8 +793,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -815,6 +824,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 2.3;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -833,8 +843,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -854,6 +866,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 2.3;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -863,12 +877,18 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 511200771F8432010F6ED289 /* Pods-Swift-DGtle.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/SnapKit",
+				);
 				INFOPLIST_FILE = "Swift-DGtle/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "luminia.Swift-DGtle";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Swift-DGtle/Supporting Files/SDGBridging-Header.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -876,12 +896,18 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6D7AB22051D18A3E743DB01C /* Pods-Swift-DGtle.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/SnapKit",
+				);
 				INFOPLIST_FILE = "Swift-DGtle/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "luminia.Swift-DGtle";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Swift-DGtle/Supporting Files/SDGBridging-Header.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -893,6 +919,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "luminia.Swift-DGtleTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Swift-DGtle.app/Swift-DGtle";
 			};
 			name = Debug;
@@ -905,6 +932,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "luminia.Swift-DGtleTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Swift-DGtle.app/Swift-DGtle";
 			};
 			name = Release;
@@ -916,6 +944,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "luminia.Swift-DGtleUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = "Swift-DGtle";
 			};
 			name = Debug;
@@ -927,6 +956,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "luminia.Swift-DGtleUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = "Swift-DGtle";
 			};
 			name = Release;

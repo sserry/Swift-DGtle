@@ -11,7 +11,7 @@ import UIKit
 extension UIView {
 
     //递归应用到所有的子视图
-    func applyToAllSubviews(closure: (UIView) -> Void) {
+    func applyToAllSubviews(_ closure: (UIView) -> Void) {
         
         if subviews.count == 0 { return }
         
@@ -53,11 +53,11 @@ extension UIView {
     
     @IBInspectable var borderColor: UIColor? {
         get {
-            return  layer.borderColor != nil ? UIColor(CGColor: layer.borderColor!) : nil
+            return  layer.borderColor != nil ? UIColor(cgColor: layer.borderColor!) : nil
         }
         
         set {
-            layer.borderColor = newValue!.CGColor
+            layer.borderColor = newValue!.cgColor
         }
     }
     

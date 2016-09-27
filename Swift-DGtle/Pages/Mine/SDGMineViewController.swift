@@ -36,14 +36,14 @@ class SDGMineViewController: UIViewController {
     func setMenuTable() {
         let header = UIImageView(image: UIImage(named: "userBg"))
         let winH = 181 * RESIZE_FACTOR
-        header.frame = CGRectMake(0, 0, SCREEN_WIDTH, winH)
-        userMenuTable = SDGZoomHeaderTableView(zoomingHeader: header, windowSize: CGRectMake(0, 0, SCREEN_WIDTH, winH))
-        userMenuTable?.registerNib(UINib(nibName: "SDGUserTableViewCell", bundle: NSBundle.mainBundle()), forCellReuseIdentifier: SDGUserTableViewCell.cellReuseIdentifier)
+        header.frame = CGRect(x: 0, y: 0, width: SCREEN_WIDTH, height: winH)
+        userMenuTable = SDGZoomHeaderTableView(zoomingHeader: header, windowSize: CGRect(x: 0, y: 0, width: SCREEN_WIDTH, height: winH))
+        userMenuTable?.register(UINib(nibName: "SDGUserTableViewCell", bundle: Bundle.main), forCellReuseIdentifier: SDGUserTableViewCell.cellReuseIdentifier)
         userMenuTable?.delegate = self
         userMenuTable?.dataSource = self
         view.addSubview(userMenuTable!)
         userMenuTable?.snp_makeConstraints { $0.edges.equalToSuperview() }
-        userMenuTable?.tableHeaderView = SDGUserUnloginHeader(frame: CGRectMake(0, 0, SCREEN_WIDTH, winH))
+        userMenuTable?.tableHeaderView = SDGUserUnloginHeader(frame: CGRect(x: 0, y: 0, width: SCREEN_WIDTH, height: winH))
     }
 
 
@@ -51,40 +51,40 @@ class SDGMineViewController: UIViewController {
 
 extension SDGMineViewController {
 
-    func settingBtnClicked(sender: UIButton ) {
+    func settingBtnClicked(_ sender: UIButton ) {
     
     }
 }
 
 extension SDGMineViewController: UITableViewDelegate, UITableViewDataSource {
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 6
     }
     
-    func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         return 0.01
     }
     
-    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 20
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let model = SDGUserCellSettingModel(iconName: iconNameArr[indexPath.row], title: cellTitleArr[indexPath.row])
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let model = SDGUserCellSettingModel(iconName: iconNameArr[(indexPath as NSIndexPath).row], title: cellTitleArr[(indexPath as NSIndexPath).row])
         return SDGUserTableViewCell.configureCellForTableView(tableView, aModelSource: model)
     }
     
-    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 50
     }
     
-    func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let header: UIView = {
-            let header = UIView(frame: CGRectMake(0, 0, view.gg_w, 20))
+            let header = UIView(frame: CGRect(x: 0, y: 0, width: view.gg_w, height: 20))
             header.backgroundColor = UIColor.colorWithHexString("CCCCCC")
             return header
         }()
@@ -95,10 +95,10 @@ extension SDGMineViewController: UITableViewDelegate, UITableViewDataSource {
 
 extension SDGMineViewController: UIScrollViewDelegate {
     
-    func scrollViewDidScroll(scrollView: UIScrollView) {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let offsetY = scrollView.contentOffset.y
         if offsetY > 0 {
-            scrollView.setContentOffset(CGPointMake(scrollView.contentOffset.x, 0), animated: false)
+            scrollView.setContentOffset(CGPoint(x: scrollView.contentOffset.x, y: 0), animated: false)
             return
         }
         let scale = max(1 + (-offsetY) / 170, 1)

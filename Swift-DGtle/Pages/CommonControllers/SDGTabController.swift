@@ -22,7 +22,7 @@ class SDGTabController: UITabBarController {
         homeVC.tabBarItem = homeBarItem
         let homeNavVC = SDGNavigationController(rootViewController: homeVC)
         
-        let bar = ButtonsBar(frame: CGRectMake(0, 0, 180, 44), titlesArray: ["精选", "发现"], buttonMargin: 84)
+        let bar = ButtonsBar(frame: CGRect(x: 0, y: 0, width: 180, height: 44), titlesArray: ["精选", "发现"], buttonMargin: 84)
         let leftVC = SDGGroupLeftChildViewController()
         let rightVC = SDGGroupRightChildViewController()
         let groupVC = SDGPageViewController(bottonBar: bar, viewControllers: [leftVC, rightVC])
@@ -33,7 +33,7 @@ class SDGTabController: UITabBarController {
         let msVC = SDGMsgCommentChildViewController()
         let likeVC = SDGMsgLikeChildViewController()
         let pmVC = SDGMsgPrivateChildViewControlle()
-        let btnBar = ButtonsBar(frame: CGRectMake(0, 0, 205, 44), titlesArray: ["评论", "赞", "私信"], buttonMargin: 38)
+        let btnBar = ButtonsBar(frame: CGRect(x: 0, y: 0, width: 205, height: 44), titlesArray: ["评论", "赞", "私信"], buttonMargin: 38)
         let msgVC = SDGPageViewController(bottonBar: btnBar, viewControllers: [msVC, likeVC, pmVC])
         let msgBarItem = UITabBarItem(title: "消息", image: UIImage(named: "tab_inbox"), selectedImage: UIImage(named: "tab_inbox_act"))
         msgVC.tabBarItem = msgBarItem

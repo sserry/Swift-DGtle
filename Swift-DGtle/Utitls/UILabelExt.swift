@@ -10,30 +10,30 @@ import UIKit
 
 //有内边距的label
 class DMLabel: UILabel {
-    var insets: UIEdgeInsets = UIEdgeInsetsZero
+    var insets: UIEdgeInsets = UIEdgeInsets.zero
     
-    override func drawTextInRect(rect: CGRect) {
-        super.drawTextInRect(UIEdgeInsetsInsetRect(rect, insets))
+    override func drawText(in rect: CGRect) {
+        super.drawText(in: UIEdgeInsetsInsetRect(rect, insets))
     }
     
 }
 
 extension UILabel {
     
-    class func labelWithFontSize(fontSize: CGFloat, textColor color: UIColor, fontWeight: CGFloat, labelText text: String?, textAlign: NSTextAlignment) -> UILabel {
+    class func labelWithFontSize(_ fontSize: CGFloat, textColor color: UIColor, fontWeight: CGFloat, labelText text: String?, textAlign: NSTextAlignment) -> UILabel {
         let label = UILabel()
-        label.font = UIFont.systemFontOfSize(fontSize, weight: fontWeight)
+        label.font = UIFont.systemFont(ofSize: fontSize, weight: fontWeight)
         label.textColor = color
         label.text = text
         label.textAlignment = textAlign
         return label
     }
     
-    class func labelWithThinFontSize(fontSize: CGFloat, textColor color: UIColor, labelText text: String?, textAlign: NSTextAlignment) -> UILabel {
+    class func labelWithThinFontSize(_ fontSize: CGFloat, textColor color: UIColor, labelText text: String?, textAlign: NSTextAlignment) -> UILabel {
         return UILabel.labelWithFontSize(fontSize, textColor: color, fontWeight: UIFontWeightThin, labelText: text, textAlign: textAlign)
     }
     
-    class func labelWithNormalFontSize(fontSize: CGFloat, textColor color: UIColor, labelText text: String?, textAlign: NSTextAlignment) -> UILabel {
+    class func labelWithNormalFontSize(_ fontSize: CGFloat, textColor color: UIColor, labelText text: String?, textAlign: NSTextAlignment) -> UILabel {
         return UILabel.labelWithFontSize(fontSize, textColor: color, fontWeight: UIFontWeightRegular, labelText: text, textAlign: textAlign)
     }
     

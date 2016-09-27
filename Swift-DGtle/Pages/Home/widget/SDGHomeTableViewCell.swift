@@ -15,7 +15,7 @@ class SDGHomeTableViewCell: UITableViewCell {
         super.awakeFromNib()
     }
 
-    override func setSelected(selected: Bool, animated: Bool) {
+    override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
     
@@ -28,7 +28,7 @@ extension SDGHomeTableViewCell: SDTableCellConfigureProtocol {
         return "SDG_HOME_TABLE_CELL_REUSED_ID"
     }
     
-    func updateDataSource(modelSource: HomeArticalModel) {
+    func updateDataSource(_ modelSource: HomeArticalModel) {
         
     }
     

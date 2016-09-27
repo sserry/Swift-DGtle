@@ -19,10 +19,10 @@ class SDGRereshHeader: MJRefreshGifHeader {
             let img  = UIImage(named: "whale\(i)")
             whaleArray.append(img!)
         }
-        setImages([whaleArray.last!], forState: .Idle)
-        setImages(whaleArray, forState: .Refreshing)
-        lastUpdatedTimeLabel.hidden = true
-        stateLabel.hidden = true
+        setImages([whaleArray.last!], for: .idle)
+        setImages(whaleArray, for: .refreshing)
+        lastUpdatedTimeLabel.isHidden = true
+        stateLabel.isHidden = true
     }
     
     override func placeSubviews() {

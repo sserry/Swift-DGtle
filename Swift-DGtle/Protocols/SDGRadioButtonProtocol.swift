@@ -10,7 +10,7 @@ import UIKit
 
 protocol SDGRadioButtonProtocol: class {
     var buttonsList: [UIButton] { get }
-    func radioButtonDidSelectedIndex(index: Int?)
+    func radioButtonDidSelectedIndex(_ index: Int?)
 }
 
 extension SDGRadioButtonProtocol{
@@ -19,7 +19,7 @@ extension SDGRadioButtonProtocol{
         
         get {
             for index in buttonsList.indices {
-                if buttonsList[index].selected {
+                if buttonsList[index].isSelected {
                     return index
                 }
             }
@@ -28,7 +28,7 @@ extension SDGRadioButtonProtocol{
         
         set {
             for index in buttonsList.indices {
-                buttonsList[index].selected = index == newValue
+                buttonsList[index].isSelected = index == newValue
                 if index == newValue {
                     radioButtonDidSelectedIndex(index)
                 }

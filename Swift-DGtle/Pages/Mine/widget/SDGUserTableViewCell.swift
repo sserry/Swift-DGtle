@@ -19,10 +19,10 @@ class SDGUserTableViewCell: UITableViewCell {
         
     }
 
-    override func setSelected(selected: Bool, animated: Bool) {
+    override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-        if self.selected  {
-            self.selected = false
+        if self.isSelected  {
+            self.isSelected = false
         }
     }
     
@@ -33,7 +33,7 @@ extension SDGUserTableViewCell: SDTableCellConfigureProtocol {
         return "USER_TABLE_CELL_REUSE_IDENTIFER"
     }
     
-    func updateDataSource(modelSource: SDGUserCellSettingModel) {
+    func updateDataSource(_ modelSource: SDGUserCellSettingModel) {
         cellIcon.image = UIImage(named: modelSource.iconName)
         cellLabel.text = modelSource.title
     }

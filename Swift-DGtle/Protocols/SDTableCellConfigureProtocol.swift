@@ -16,15 +16,15 @@ protocol SDTableCellConfigureProtocol {
     associatedtype ModelType
     
     static var cellReuseIdentifier: String { get }
-    func updateDataSource(modelSource: ModelType)
+    func updateDataSource(_ modelSource: ModelType)
 }
 
 extension SDTableCellConfigureProtocol where Self: UITableViewCell {
     
-    static func configureCellForTableView(tableView: UITableView, aModelSource: ModelType) -> Self {
-        var cell = tableView.dequeueReusableCellWithIdentifier(self.cellReuseIdentifier) as? Self
+    static func configureCellForTableView(_ tableView: UITableView, aModelSource: ModelType) -> Self {
+        var cell = tableView.dequeueReusableCell(withIdentifier: self.cellReuseIdentifier) as? Self
         if cell == nil  {
-            cell = Self.init(style: .Default, reuseIdentifier: self.cellReuseIdentifier)
+            cell = Self.init(style: .default, reuseIdentifier: self.cellReuseIdentifier)
         }
         cell!.updateDataSource(aModelSource)
         

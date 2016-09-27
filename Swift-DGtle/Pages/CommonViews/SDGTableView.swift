@@ -9,14 +9,14 @@
 import UIKit
 
 @objc protocol SDGTableViewDelegate {
-    func refreshTableView(tableView: SDGTableView)
-    optional func tableViewLoadMore()
+    func refreshTableView(_ tableView: SDGTableView)
+    @objc optional func tableViewLoadMore()
 }
 
 class SDGTableView: UITableView {
 
-    override func drawRect(rect: CGRect) {
-        super.drawRect(rect)
+    override func draw(_ rect: CGRect) {
+        super.draw(rect)
         backgroundColor = GLOBAL_GRAY_LIGHT
         tableFooterView = UIView()
         
@@ -27,7 +27,7 @@ class SDGTableView: UITableView {
     }
     
     convenience init(frame: CGRect, aDelegete: AnyObject) {
-        self.init(frame: frame, style: .Grouped)
+        self.init(frame: frame, style: .grouped)
         if let dlg = aDelegete as? UITableViewDelegate,
             let dsc = aDelegete as? UITableViewDataSource {
             self.delegate = dlg
@@ -40,7 +40,7 @@ class SDGTableView: UITableView {
 
 extension SDGTableView {
     
-    func tableViewDidRefreshed(sender: SDGRereshHeader) {
+    func tableViewDidRefreshed(_ sender: SDGRereshHeader) {
         
         if let dlg = delegate as? SDGTableViewDelegate {
             dlg.refreshTableView(self)

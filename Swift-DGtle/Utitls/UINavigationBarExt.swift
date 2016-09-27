@@ -30,26 +30,26 @@ extension UINavigationBar {
         }
     }
     
-    func gg_setBackgroundColor(color: UIColor) {
+    func gg_setBackgroundColor(_ color: UIColor) {
         
         if overlay == nil {
-            setBackgroundImage(UIImage(), forBarMetrics: .Default)
-            overlay = UIView(frame: CGRectMake(0, -20, UIScreen .mainScreen().bounds.size.width, CGRectGetHeight(bounds) + 20))
-            overlay?.userInteractionEnabled = false
-            overlay?.autoresizingMask = UIViewAutoresizing.FlexibleWidth.union(UIViewAutoresizing.FlexibleHeight)
-            insertSubview(overlay!, atIndex: 0)
+            setBackgroundImage(UIImage(), for: .default)
+            overlay = UIView(frame: CGRect(x: 0, y: -20, width: UIScreen.main.bounds.size.width, height: bounds.height + 20))
+            overlay?.isUserInteractionEnabled = false
+            overlay?.autoresizingMask = UIViewAutoresizing.flexibleWidth.union(UIViewAutoresizing.flexibleHeight)
+            insertSubview(overlay!, at: 0)
         }
         overlay?.backgroundColor = color
     }
     
     func gg_reset() {
-        setBackgroundImage(nil, forBarMetrics: .Default)
+        setBackgroundImage(nil, for: .default)
         overlay?.removeFromSuperview()
         overlay = nil
     }
     
     func setBarTransparent() {
-        gg_setBackgroundColor(UIColor.whiteColor().colorWithAlphaComponent(0.0))
+        gg_setBackgroundColor(UIColor.white.withAlphaComponent(0.0))
         shadowImage = UIImage()
     }
     

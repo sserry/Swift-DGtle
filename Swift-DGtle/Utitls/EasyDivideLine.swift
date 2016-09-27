@@ -12,13 +12,13 @@ import UIKit
 public let GLOBAL_DIVIDE_LINE_COLOR  = UIColor(colorLiteralRed: 204.0 / 255.0, green: 204.0 / 255.0, blue: 204.0 / 255.0, alpha: 1)
 
 enum LineDirection {
-    case Vertical(topOffset: CGFloat, bottomOffset: CGFloat, side: NSLayoutAttribute)
-    case Horizental(leftOffset: CGFloat, rightOffset: CGFloat, side: NSLayoutAttribute)
+    case vertical(topOffset: CGFloat, bottomOffset: CGFloat, side: NSLayoutAttribute)
+    case horizental(leftOffset: CGFloat, rightOffset: CGFloat, side: NSLayoutAttribute)
 }
 
 class EasyDivideLineManager {
     
-    private static let sharedInstance = EasyDivideLineManager()
+    fileprivate static let sharedInstance = EasyDivideLineManager()
     var lineWidth: CGFloat = SINGLE_LINE_WIDTH
     var lineColor: UIColor = GLOBAL_DIVIDE_LINE_COLOR
     
@@ -33,25 +33,25 @@ class EasyDivideLineManager {
  */
 extension UIView {
 
-    func addDivideLineOnSide(direction: LineDirection, withColor color: UIColor, andWidth aWidth: CGFloat ) {
+    func addDivideLineOnSide(_ direction: LineDirection, withColor color: UIColor, andWidth aWidth: CGFloat ) {
         let line = UIView()
         line.translatesAutoresizingMaskIntoConstraints = false
         line.backgroundColor = color
         addSubview(line)
         switch direction {
-        case .Horizental(let lOffset, let rOffset, let side):
-            let leftLayoutConstraint = NSLayoutConstraint(item: line, attribute: .Left, relatedBy: .Equal, toItem: self, attribute: .Left, multiplier: 1, constant: lOffset)
-            let rightLayoutCOntraint = NSLayoutConstraint(item: line, attribute: .Right, relatedBy: .Equal, toItem: self, attribute: .Right, multiplier: 1, constant: -rOffset)
-            let vLayoutContraint = NSLayoutConstraint(item: line, attribute: side, relatedBy: .Equal, toItem: self, attribute: side, multiplier: 1, constant: 0)
-            let heightLayoutContraint = NSLayoutConstraint(item: line, attribute: .Height, relatedBy: .Equal, toItem: nil, attribute: .Height, multiplier: 1, constant: aWidth)
+        case .horizental(let lOffset, let rOffset, let side):
+            let leftLayoutConstraint = NSLayoutConstraint(item: line, attribute: .left, relatedBy: .equal, toItem: self, attribute: .left, multiplier: 1, constant: lOffset)
+            let rightLayoutCOntraint = NSLayoutConstraint(item: line, attribute: .right, relatedBy: .equal, toItem: self, attribute: .right, multiplier: 1, constant: -rOffset)
+            let vLayoutContraint = NSLayoutConstraint(item: line, attribute: side, relatedBy: .equal, toItem: self, attribute: side, multiplier: 1, constant: 0)
+            let heightLayoutContraint = NSLayoutConstraint(item: line, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .height, multiplier: 1, constant: aWidth)
             addConstraints([leftLayoutConstraint, rightLayoutCOntraint, vLayoutContraint])
             line.addConstraints([heightLayoutContraint])
             break
-        case .Vertical(let tOffset, let bOffset, let side):
-            let topLayoutConstraint = NSLayoutConstraint(item: line, attribute: .Top, relatedBy: .Equal, toItem: self, attribute: .Top, multiplier: 1, constant: tOffset)
-            let btmLayoutConstraint = NSLayoutConstraint(item: line, attribute: .Bottom, relatedBy: .Equal, toItem: self, attribute: .Bottom, multiplier: 1, constant: -bOffset)
-            let hLayoutContraint = NSLayoutConstraint(item: line, attribute: side, relatedBy: .Equal, toItem: self, attribute: side, multiplier: 1, constant: 0)
-            let widthLayoutContraint = NSLayoutConstraint(item: line, attribute: .Width, relatedBy: .Equal, toItem: nil, attribute: .Width, multiplier: 0, constant: aWidth)
+        case .vertical(let tOffset, let bOffset, let side):
+            let topLayoutConstraint = NSLayoutConstraint(item: line, attribute: .top, relatedBy: .equal, toItem: self, attribute: .top, multiplier: 1, constant: tOffset)
+            let btmLayoutConstraint = NSLayoutConstraint(item: line, attribute: .bottom, relatedBy: .equal, toItem: self, attribute: .bottom, multiplier: 1, constant: -bOffset)
+            let hLayoutContraint = NSLayoutConstraint(item: line, attribute: side, relatedBy: .equal, toItem: self, attribute: side, multiplier: 1, constant: 0)
+            let widthLayoutContraint = NSLayoutConstraint(item: line, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .width, multiplier: 0, constant: aWidth)
             addConstraints([topLayoutConstraint, btmLayoutConstraint, hLayoutContraint])
             line.addConstraints([widthLayoutContraint])
             break
@@ -64,23 +64,23 @@ extension UIView {
  */
 extension UIView {
     
-    func addBottomLineWithLeftInset(leftInset: CGFloat, rightInset: CGFloat) {
+    func addBottomLineWithLeftInset(_ leftInset: CGFloat, rightInset: CGFloat) {
         
-        addDivideLineOnSide(.Horizental(leftOffset: leftInset, rightOffset: rightInset, side: .Bottom),
+        addDivideLineOnSide(.horizental(leftOffset: leftInset, rightOffset: rightInset, side: .bottom),
                             withColor: EasyDivideLineManager.sharedManager.lineColor,
                             andWidth: EasyDivideLineManager.sharedManager.lineWidth)
         
     }
     
-    func addBottomDivideLineWithDoubleInsets(inset: CGFloat) {
+    func addBottomDivideLineWithDoubleInsets(_ inset: CGFloat) {
         addBottomLineWithLeftInset(inset, rightInset: inset)
     }
     
-    func addBottomDivideLineWithLeftInset(leftInset: CGFloat) {
+    func addBottomDivideLineWithLeftInset(_ leftInset: CGFloat) {
         addBottomLineWithLeftInset(leftInset, rightInset: 0)
     }
     
-    func addBottomDivideLineWithRightInset(rightInset: CGFloat) {
+    func addBottomDivideLineWithRightInset(_ rightInset: CGFloat) {
         addBottomLineWithLeftInset(0, rightInset: rightInset)
     }
     
@@ -94,23 +94,23 @@ extension UIView {
  */
 extension UIView {
 
-    func addTopLineWithLeftInset(leftInset: CGFloat, rightInset: CGFloat) {
+    func addTopLineWithLeftInset(_ leftInset: CGFloat, rightInset: CGFloat) {
         
-        addDivideLineOnSide(.Horizental(leftOffset: leftInset, rightOffset: rightInset, side: .Top),
+        addDivideLineOnSide(.horizental(leftOffset: leftInset, rightOffset: rightInset, side: .top),
                             withColor: EasyDivideLineManager.sharedManager.lineColor,
                             andWidth: EasyDivideLineManager.sharedManager.lineWidth)
         
     }
     
-    func addTopDivideLineWithDoubleInsets(inset: CGFloat) {
+    func addTopDivideLineWithDoubleInsets(_ inset: CGFloat) {
         addTopLineWithLeftInset(inset, rightInset: inset)
     }
     
-    func addTopDivideLineWithLeftInset(leftInset: CGFloat) {
+    func addTopDivideLineWithLeftInset(_ leftInset: CGFloat) {
         addTopLineWithLeftInset(leftInset, rightInset: 0)
     }
     
-    func addTopDivideLineWithRightInset(rightInset: CGFloat) {
+    func addTopDivideLineWithRightInset(_ rightInset: CGFloat) {
         addTopLineWithLeftInset(0, rightInset: rightInset)
     }
     
@@ -123,23 +123,23 @@ extension UIView {
  *  Left Extension
  */
 extension UIView {
-    func addLeftLineWithTopInset(topInset: CGFloat, bottomInset: CGFloat) {
+    func addLeftLineWithTopInset(_ topInset: CGFloat, bottomInset: CGFloat) {
         
-        addDivideLineOnSide(.Vertical(topOffset: topInset, bottomOffset: bottomInset, side: .Left),
+        addDivideLineOnSide(.vertical(topOffset: topInset, bottomOffset: bottomInset, side: .left),
                             withColor: EasyDivideLineManager.sharedManager.lineColor,
                             andWidth: EasyDivideLineManager.sharedManager.lineWidth)
         
     }
     
-    func addLeftDivideLineWithDoubleInsets(inset: CGFloat) {
+    func addLeftDivideLineWithDoubleInsets(_ inset: CGFloat) {
         addLeftLineWithTopInset(inset, bottomInset: inset)
     }
     
-    func addLeftDivideLineWithTopInset(topInset: CGFloat) {
+    func addLeftDivideLineWithTopInset(_ topInset: CGFloat) {
         addLeftLineWithTopInset(topInset, bottomInset: 0)
     }
     
-    func addLeftDivideLineWithBottomInset(bottomInset: CGFloat) {
+    func addLeftDivideLineWithBottomInset(_ bottomInset: CGFloat) {
         addLeftLineWithTopInset(0, bottomInset: bottomInset)
     }
     
@@ -152,23 +152,23 @@ extension UIView {
  *  Right Extension
  */
 extension UIView {
-    func addRightLineWithTopInset(topInset: CGFloat, bottomInset: CGFloat) {
+    func addRightLineWithTopInset(_ topInset: CGFloat, bottomInset: CGFloat) {
         
-        addDivideLineOnSide(.Vertical(topOffset: topInset, bottomOffset: bottomInset, side: .Right),
+        addDivideLineOnSide(.vertical(topOffset: topInset, bottomOffset: bottomInset, side: .right),
                             withColor: EasyDivideLineManager.sharedManager.lineColor,
                             andWidth: EasyDivideLineManager.sharedManager.lineWidth)
         
     }
     
-    func addRightDivideLineWithDoubleInsets(inset: CGFloat) {
+    func addRightDivideLineWithDoubleInsets(_ inset: CGFloat) {
         addRightLineWithTopInset(inset, bottomInset: inset)
     }
     
-    func addRightDivideLineWithTopInset(topInset: CGFloat) {
+    func addRightDivideLineWithTopInset(_ topInset: CGFloat) {
         addRightLineWithTopInset(topInset, bottomInset: 0)
     }
     
-    func addRightDivideLineWithBottomInset(bottomInset: CGFloat) {
+    func addRightDivideLineWithBottomInset(_ bottomInset: CGFloat) {
         addRightLineWithTopInset(0, bottomInset: bottomInset)
     }
     

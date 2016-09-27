@@ -12,21 +12,21 @@ class SDGUserUnloginHeader: UIView {
 
     var loginBlock: (() -> ())?
     var view = UIView()
-    @IBAction func doLogin(sender: AnyObject) {
+    @IBAction func doLogin(_ sender: AnyObject) {
         if let clousure = loginBlock {
             clousure()
         }
     }
     
-    override func drawRect(rect: CGRect) {
-        super.drawRect(rect)
+    override func draw(_ rect: CGRect) {
+        super.draw(rect)
         view.snp_makeConstraints { $0.edges.equalToSuperview() }
     }
  
     override init(frame: CGRect) {
         super.init(frame: frame)
-        view = NSBundle.mainBundle().loadNibNamed("SDGUserUnloginHeader", owner: self, options: nil)[0] as! UIView
-        backgroundColor = UIColor.clearColor()
+        view = Bundle.main.loadNibNamed("SDGUserUnloginHeader", owner: self, options: nil)?[0] as! UIView
+        backgroundColor = UIColor.clear
         addSubview(view)
         
     }

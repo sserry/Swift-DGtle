@@ -34,7 +34,7 @@ class SDGHomeViewController: UIViewController {
         let mainTableView = SDGTableView(frame: view.frame, aDelegete: self)
         view.addSubview(mainTableView)
         mainTableView.snp_makeConstraints { $0.edges.equalToSuperview() }
-        mainTableView.registerNib(UINib(nibName: "SDGHomeTableViewCell", bundle: NSBundle.mainBundle()), forCellReuseIdentifier: SDGHomeTableViewCell.cellReuseIdentifier)
+        mainTableView.register(UINib(nibName: "SDGHomeTableViewCell", bundle: Bundle.main), forCellReuseIdentifier: SDGHomeTableViewCell.cellReuseIdentifier)
         
         let tableHeader = SDGHomeTableHeader(
             imageUrls: ["http://img.dgtle.com/portal/201608/26/103326xgll4l4nl12l1z2j.png",
@@ -52,7 +52,7 @@ class SDGHomeViewController: UIViewController {
 //MARK: Button Actions
 extension SDGHomeViewController {
     
-    func showSearchPage(sender: UIButton) {
+    func showSearchPage(_ sender: UIButton) {
     
     }
     
@@ -62,31 +62,31 @@ extension SDGHomeViewController {
 //MARK: Table view delegate
 extension SDGHomeViewController: UITableViewDelegate, UITableViewDataSource, SDGTableViewDelegate {
     
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return 10
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         return SDGHomeTableViewCell.configureCellForTableView(tableView, aModelSource: HomeArticalModel())
     }
     
-    func refreshTableView(tableView: SDGTableView) {
+    func refreshTableView(_ tableView: SDGTableView) {
         delayExcute { tableView.mj_header.endRefreshing() }
     }
     
-    func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         return 0.01
     }
     
-    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return DEFAULT_TABLE_VIEW_HEADER_H
     }
     
-    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 300
     }
     

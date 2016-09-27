@@ -9,44 +9,44 @@
 import UIKit
 
 protocol ButtonsBarDelegate {
-    func buttonsBarDidSelectedindex(index: Int?)
+    func buttonsBarDidSelectedindex(_ index: Int?)
 }
 
 class ButtonsBar: UIView {
  
-    private let buttonW: CGFloat = 66
-    private let buttonH: CGFloat = 20
-    private let buttonTitleFontSize: CGFloat = 16
-    private var underline: UIView = UIView()
-    private var titlesArray: [String] = []
-    private var margin: CGFloat = 0
+    fileprivate let buttonW: CGFloat = 66
+    fileprivate let buttonH: CGFloat = 20
+    fileprivate let buttonTitleFontSize: CGFloat = 16
+    fileprivate var underline: UIView = UIView()
+    fileprivate var titlesArray: [String] = []
+    fileprivate var margin: CGFloat = 0
     var delegate: ButtonsBarDelegate?
     var buttonsList: [UIButton] = []
     var lineH: CGFloat = 2.4
     var normalColor: UIColor = UIColor.colorWithHexString("9A9A9A")
     var selectedColor: UIColor = SDGBlue
     
-    private var barLeftMar: CGFloat {
+    fileprivate var barLeftMar: CGFloat {
         return SCREEN_WIDTH - self.gg_w / 2
     }
     
-    private var underlineRange: CGFloat {
+    fileprivate var underlineRange: CGFloat {
         return self.gg_w - buttonW
     }
     
-    override func drawRect(rect: CGRect) {
-        super.drawRect(rect)
+    override func draw(_ rect: CGRect) {
+        super.draw(rect)
         
         let stackView = UIStackView(arrangedSubviews: buttonsList)
-        stackView.axis = .Horizontal
-        stackView.distribution = .EqualSpacing
-        stackView.alignment = .Center
+        stackView.axis = .horizontal
+        stackView.distribution = .equalSpacing
+        stackView.alignment = .center
         stackView.spacing = margin
         
         addSubview(stackView)
         stackView.snp_makeConstraints { $0.center.equalToSuperview() }
         
-        underline.frame = CGRectMake(0, gg_h - lineH, buttonW, lineH)
+        underline.frame = CGRect(x: 0, y: gg_h - lineH, width: buttonW, height: lineH)
         underline.backgroundColor = selectedColor
         
         addSubview(underline)
@@ -57,28 +57,28 @@ class ButtonsBar: UIView {
         self.margin = buttonMargin
         self.titlesArray = titlesArray
         self.buttonsList = self.titlesArray.map {
-            let button = UIButton(type: .Custom)
-            button.backgroundColor = UIColor.clearColor()
-            button.frame = CGRectMake(0, 0, buttonW, buttonW)
-            button.titleLabel?.font = UIFont.systemFontOfSize(buttonTitleFontSize, weight: UIFontWeightMedium)
-            button.addTarget(self, action: #selector(ButtonsBar.btnDidClicked(_:)), forControlEvents: .TouchUpInside)
-            button.setTitle($0, forState: .Normal)
-            button.setTitleColor(normalColor, forState: .Normal)
-            button.setTitleColor(selectedColor, forState: .Selected)
+            let button = UIButton(type: .custom)
+            button.backgroundColor = UIColor.clear
+            button.frame = CGRect(x: 0, y: 0, width: buttonW, height: buttonW)
+            button.titleLabel?.font = UIFont.systemFont(ofSize: buttonTitleFontSize, weight: UIFontWeightMedium)
+            button.addTarget(self, action: #selector(ButtonsBar.btnDidClicked(_:)), for: .touchUpInside)
+            button.setTitle($0, for: UIControlState())
+            button.setTitleColor(normalColor, for: UIControlState())
+            button.setTitleColor(selectedColor, for: .selected)
             return button
         }
-        backgroundColor = UIColor.clearColor()
+        backgroundColor = UIColor.clear
     }
 
 }
 
 extension ButtonsBar {
     
-    func btnDidClicked(sender: UIButton)  {
-        selectedIndex = buttonsList.indexOf(sender)
+    func btnDidClicked(_ sender: UIButton)  {
+        selectedIndex = buttonsList.index(of: sender)
     }
     
-    func scrollUnderlineXPercentageTo(x: CGFloat) {        
+    func scrollUnderlineXPercentageTo(_ x: CGFloat) {        
         underline.gg_x = underlineRange * x
     }
     
@@ -86,7 +86,7 @@ extension ButtonsBar {
 
 extension ButtonsBar: SDGRadioButtonProtocol {
     
-    func radioButtonDidSelectedIndex(index: Int?) {   
+    func radioButtonDidSelectedIndex(_ index: Int?) {   
         if let dlg = delegate {
             dlg.buttonsBarDidSelectedindex(index)
         }

@@ -13,19 +13,25 @@ class SDGGroupTableViewCell: UITableViewCell, SDTableCellConfigureProtocol {
     static var cellReuseIdentifier: String {
         return "SDGGROUP_CELL_REUSED_ID"
     }
-
+    
+    @IBOutlet weak var headerView: UIView!
+    @IBOutlet weak var footerView: UIView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        EasyDivideLineManager.sharedManager.lineColor = UIColor.colorWithHexString("f1f1f1")
+        headerView.addBottomDivideLineWithDoubleInsets(10)
+        footerView.addTopDivideLineWithDoubleInsets(10)
+        selectionStyle = .none
     }
 
-    override func setSelected(selected: Bool, animated: Bool) {
+    override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
     }
     
-    func updateDataSource(modelSource: SDGGroupCellModel) {
+    func updateDataSource(_ modelSource: SDGGroupCellModel) {
         
     }
     

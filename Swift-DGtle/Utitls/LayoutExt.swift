@@ -19,7 +19,7 @@ extension UIView {
     /**
      * 与某一个视图等宽 约束顶部间距以及高度
      */
-    func gg_equalWidthLayoutWithView(aView: UIView!, TopOffset offset: CGFloat!, andHeight height: CGFloat!) {
+    func gg_equalWidthLayoutWithView(_ aView: UIView!, TopOffset offset: CGFloat!, andHeight height: CGFloat!) {
         snp_makeConstraints { (make) in
             make.left.right.equalTo(aView)
             make.height.equalTo(height)
@@ -40,7 +40,7 @@ extension UIView {
     /**
      * 与某一个视图等宽等底 约束顶部间距
      */
-    func gg_equalWBLayoutWithView(aView: UIView!, topOffset offset: CGFloat!) {
+    func gg_equalWBLayoutWithView(_ aView: UIView!, topOffset offset: CGFloat!) {
         snp_makeConstraints { (make) in
             make.left.right.bottom.equalTo(aView)
             make.top.equalTo(aView).offset(offset)
@@ -50,7 +50,7 @@ extension UIView {
     /**
      * 与父视图等宽等底 约束顶部间距
      */
-    func gg_equalWBLayoutWithTopOffset(offset: CGFloat!) {
+    func gg_equalWBLayoutWithTopOffset(_ offset: CGFloat!) {
         guard superview != nil else {
             return
         }
@@ -60,7 +60,7 @@ extension UIView {
     /**
      * 与父视图等宽等底 约束高度
      */
-    func gg_equalWBLayoutWithHeight(height: CGFloat!) {
+    func gg_equalWBLayoutWithHeight(_ height: CGFloat!) {
         guard superview != nil else {
             return
         }
@@ -80,7 +80,7 @@ extension UIView {
     /**
      * 与某一个视图垂直居中 约束宽高以及左右边距
      */
-    func gg_centerYLayoutWithView(aView: UIView!, aWidth: CGFloat?, height: CGFloat?, leftOffset: CGFloat?, rightOffset: CGFloat?) {
+    func gg_centerYLayoutWithView(_ aView: UIView!, aWidth: CGFloat?, height: CGFloat?, leftOffset: CGFloat?, rightOffset: CGFloat?) {
         snp_makeConstraints { (make) in
             make.centerY.equalTo(aView)
             if height != nil {
@@ -101,7 +101,7 @@ extension UIView {
     /**
      * 与父视图垂直居中 约束宽高以及左右边距
      */
-    func gg_centerYLayout(aWidth: CGFloat?, height: CGFloat?, leftOffset: CGFloat!, rightOffset: CGFloat?) {
+    func gg_centerYLayout(_ aWidth: CGFloat?, height: CGFloat?, leftOffset: CGFloat!, rightOffset: CGFloat?) {
         guard superview != nil else {
             return
         }
@@ -111,21 +111,21 @@ extension UIView {
     /**
      * 与父视图垂直居中 约束宽高以及左边距
      */
-    func gg_centerYLayoutWithLeftOffset(leftOffset: CGFloat!, aWidth: CGFloat?, aHeight: CGFloat?) {
+    func gg_centerYLayoutWithLeftOffset(_ leftOffset: CGFloat!, aWidth: CGFloat?, aHeight: CGFloat?) {
         gg_centerYLayout(aWidth, height: aHeight, leftOffset: leftOffset, rightOffset: nil)
     }
     
     /**
      * 与父视图垂直居中 约束宽高以及右边距
      */
-    func gg_centerYLayoutWithRightOffset(rightOffset: CGFloat!, aWidth: CGFloat?, aHeight: CGFloat?) {
+    func gg_centerYLayoutWithRightOffset(_ rightOffset: CGFloat!, aWidth: CGFloat?, aHeight: CGFloat?) {
         gg_centerYLayout(aWidth, height: aHeight, leftOffset: nil, rightOffset: rightOffset)
     }
     
     /**
      * 与父视图垂直居中 约束高以及左右边距
      */
-    func gg_centerYLayoutWithLROffset(leftOffset: CGFloat!, rightOffset: CGFloat!, height: CGFloat?) {
+    func gg_centerYLayoutWithLROffset(_ leftOffset: CGFloat!, rightOffset: CGFloat!, height: CGFloat?) {
         gg_centerYLayout(nil, height: height, leftOffset: leftOffset, rightOffset: rightOffset)
     }
 

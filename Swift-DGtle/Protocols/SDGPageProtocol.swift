@@ -27,19 +27,19 @@ extension SDGPageProtocol where Self: UIScrollViewDelegate, Self: UIViewControll
             addChildViewController(controller)
         }
         automaticallyAdjustsScrollViewInsets = false
-        horizentalScrollView.pagingEnabled = true
+        horizentalScrollView.isPagingEnabled = true
         horizentalScrollView.bounces = false
         horizentalScrollView.delaysContentTouches = true
-        horizentalScrollView.directionalLockEnabled = true
+        horizentalScrollView.isDirectionalLockEnabled = true
         horizentalScrollView.showsVerticalScrollIndicator = false
         horizentalScrollView.showsHorizontalScrollIndicator = false
         horizentalScrollView.alwaysBounceVertical = false
 
         for i in vcArray.indices {
-            vcArray[i].view.frame = CGRectMake(CGFloat(i) * SCREEN_WIDTH, 0, SCREEN_WIDTH, SCREEN_HEIGHT)
+            vcArray[i].view.frame = CGRect(x: CGFloat(i) * SCREEN_WIDTH, y: 0, width: SCREEN_WIDTH, height: SCREEN_HEIGHT)
             horizentalScrollView.addSubview(vcArray[i].view)
         }
-        horizentalScrollView.contentSize = CGSizeMake(SCREEN_WIDTH * CGFloat(vcArray.count), horizentalScrollView.gg_h)
+        horizentalScrollView.contentSize = CGSize(width: SCREEN_WIDTH * CGFloat(vcArray.count), height: horizentalScrollView.gg_h)
         view.addSubview(horizentalScrollView)
         horizentalScrollView.delegate = self
         

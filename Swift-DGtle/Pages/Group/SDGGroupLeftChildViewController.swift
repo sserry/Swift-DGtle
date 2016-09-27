@@ -16,9 +16,9 @@ class SDGGroupLeftChildViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = GLOBAL_GRAY_LIGHT
         
-        mainTable = SDGTableView(frame: CGRectMake(0, 0, view.gg_w, view.gg_h), aDelegete: self)
+        mainTable = SDGTableView(frame: CGRect(x: 0, y: 0, width: view.gg_w, height: view.gg_h), aDelegete: self)
         mainTable.contentInset = UIEdgeInsetsMake(NAV_BAR_H, 0, TAB_BAR_H, 0)
-        mainTable.registerNib(UINib(nibName: "SDGGroupTableViewCell", bundle: NSBundle.mainBundle()), forCellReuseIdentifier: SDGGroupTableViewCell.cellReuseIdentifier)
+        mainTable.register(UINib(nibName: "SDGGroupTableViewCell", bundle: Bundle.main), forCellReuseIdentifier: SDGGroupTableViewCell.cellReuseIdentifier)
         view.addSubview(mainTable)
     }
 
@@ -26,33 +26,33 @@ class SDGGroupLeftChildViewController: UIViewController {
 
 extension SDGGroupLeftChildViewController: UITableViewDelegate, UITableViewDataSource {
 
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return 10
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         return SDGGroupTableViewCell.configureCellForTableView(tableView, aModelSource: SDGGroupCellModel())
     }
     
-    func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         return 0.01
     }
     
-    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 15
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 13
     }
     
-    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 300
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 330
     }
 }
 
 extension SDGGroupLeftChildViewController: SDGTableViewDelegate {
-    func refreshTableView(tableView: SDGTableView) {
+    func refreshTableView(_ tableView: SDGTableView) {
         delayExcute { tableView.mj_header.endRefreshing() }
     }
 }

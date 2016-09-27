@@ -11,18 +11,18 @@ import UIKit
 class SDGZoomHeaderTableView: UITableView {
 
     var zoomingHeader: UIView?
-    var windowSize = CGRectZero
+    var windowSize = CGRect.zero
     
-    override func drawRect(rect: CGRect) {
+    override func draw(_ rect: CGRect) {
         
         if tableHeaderView == nil {
             let transparentHeader = UIView(frame: windowSize)
-            transparentHeader.backgroundColor = UIColor.clearColor()
-            backgroundColor = UIColor.clearColor()
+            transparentHeader.backgroundColor = UIColor.clear
+            backgroundColor = UIColor.clear
             tableHeaderView = transparentHeader
         }
         
-        zoomingHeader?.frame = CGRectMake(0, 0, zoomingHeader!.gg_w, zoomingHeader!.gg_h)
+        zoomingHeader?.frame = CGRect(x: 0, y: 0, width: zoomingHeader!.gg_w, height: zoomingHeader!.gg_h)
         if let sv = superview {
             sv.addSubview(zoomingHeader!)
             sv.insertSubview(zoomingHeader!, belowSubview: self)
@@ -30,15 +30,15 @@ class SDGZoomHeaderTableView: UITableView {
     }
     
     convenience init(zoomingHeader: UIView, windowSize: CGRect) {
-        self.init(frame: SCREEN_SIZE, style: .Grouped)
+        self.init(frame: SCREEN_SIZE, style: .grouped)
         self.zoomingHeader = zoomingHeader
         self.windowSize = windowSize
-        backgroundColor = UIColor.clearColor()
+        backgroundColor = UIColor.clear
     }
     
-    func zoomingHeaderforScale(scale: CGFloat) {
+    func zoomingHeaderforScale(_ scale: CGFloat) {
         if scale > 1 {
-            zoomingHeader?.frame = CGRectMake((1 - scale) * windowSize.size.width / 2, 0, windowSize.size.width * scale, windowSize.size.height * scale)
+            zoomingHeader?.frame = CGRect(x: (1 - scale) * windowSize.size.width / 2, y: 0, width: windowSize.size.width * scale, height: windowSize.size.height * scale)
         }
     }
  

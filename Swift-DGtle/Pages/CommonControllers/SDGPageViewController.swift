@@ -17,7 +17,7 @@ class SDGPageViewController: UIViewController, SDGPageProtocol {
     
     var vcArray: [UIViewController] = []
     var curContentX: CGFloat = 0.0
-    var horizentalScrollView = UIScrollView(frame: CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT))
+    var horizentalScrollView = UIScrollView(frame: CGRect(x: 0, y: 0, width: SCREEN_WIDTH, height: SCREEN_HEIGHT))
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,8 +33,8 @@ class SDGPageViewController: UIViewController, SDGPageProtocol {
 }
 
 extension SDGPageViewController: UIScrollViewDelegate {
-    func scrollViewDidEndDecelerating(scrollView: UIScrollView)  {
-        guard scrollView.contentOffset.x % SCREEN_WIDTH == 0 else {
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView)  {
+        guard scrollView.contentOffset.x.truncatingRemainder(dividingBy: SCREEN_WIDTH) == 0 else {
             return
         }
         
@@ -47,7 +47,7 @@ extension SDGPageViewController: UIScrollViewDelegate {
         buttonsBar.selectedIndex = Int(curContentX / SCREEN_WIDTH)
     }
     
-    func scrollViewDidScroll(scrollView: UIScrollView) {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let cx = scrollView.contentOffset.x
         buttonsBar.scrollUnderlineXPercentageTo(cx / SCREEN_WIDTH / CGFloat(vcArray.count - 1))
     }
@@ -57,9 +57,9 @@ extension SDGPageViewController: UIScrollViewDelegate {
 extension SDGPageViewController: ButtonsBarDelegate {
     
     
-    func buttonsBarDidSelectedindex(index: Int?)  {
+    func buttonsBarDidSelectedindex(_ index: Int?)  {
         if let idx = index {
-            horizentalScrollView.scrollRectToVisible(CGRectMake(CGFloat(idx) * SCREEN_WIDTH, 0, SCREEN_WIDTH, SCREEN_HEIGHT), animated: true)
+            horizentalScrollView.scrollRectToVisible(CGRect(x: CGFloat(idx) * SCREEN_WIDTH, y: 0, width: SCREEN_WIDTH, height: SCREEN_HEIGHT), animated: true)
         }
     }
 }
