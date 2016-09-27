@@ -13,7 +13,7 @@ class SDGMsgPrivateChildViewControlle: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = UIColor.colorWithHexString("d3d3f1")
+        view.backgroundColor = UIColor.colorWithHexString(stringToConvert: "d3d3f1")
     }
 
 }

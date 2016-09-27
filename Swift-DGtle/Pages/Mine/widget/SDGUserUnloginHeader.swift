@@ -20,7 +20,7 @@ class SDGUserUnloginHeader: UIView {
     
     override func draw(_ rect: CGRect) {
         super.draw(rect)
-        view.snp_makeConstraints { $0.edges.equalToSuperview() }
+        view.snp.makeConstraints { $0.edges.equalToSuperview() }
     }
  
     override init(frame: CGRect) {

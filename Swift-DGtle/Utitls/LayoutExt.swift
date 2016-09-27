@@ -20,7 +20,7 @@ extension UIView {
      * 与某一个视图等宽 约束顶部间距以及高度
      */
     func gg_equalWidthLayoutWithView(_ aView: UIView!, TopOffset offset: CGFloat!, andHeight height: CGFloat!) {
-        snp_makeConstraints { (make) in
+        snp.makeConstraints { (make) in
             make.left.right.equalTo(aView)
             make.height.equalTo(height)
             make.top.equalTo(aView).offset(offset)
@@ -41,7 +41,7 @@ extension UIView {
      * 与某一个视图等宽等底 约束顶部间距
      */
     func gg_equalWBLayoutWithView(_ aView: UIView!, topOffset offset: CGFloat!) {
-        snp_makeConstraints { (make) in
+        snp.makeConstraints { (make) in
             make.left.right.bottom.equalTo(aView)
             make.top.equalTo(aView).offset(offset)
         }
@@ -64,7 +64,7 @@ extension UIView {
         guard superview != nil else {
             return
         }
-        snp_makeConstraints { (make) in
+        snp.makeConstraints { (make) in
             make.left.right.bottom.equalTo(superview!)
             make.height.equalTo(height)
         }
@@ -81,7 +81,7 @@ extension UIView {
      * 与某一个视图垂直居中 约束宽高以及左右边距
      */
     func gg_centerYLayoutWithView(_ aView: UIView!, aWidth: CGFloat?, height: CGFloat?, leftOffset: CGFloat?, rightOffset: CGFloat?) {
-        snp_makeConstraints { (make) in
+        snp.makeConstraints { (make) in
             make.centerY.equalTo(aView)
             if height != nil {
                 make.height.equalTo(height!)

@@ -33,7 +33,7 @@ class SDGHomeViewController: UIViewController {
         
         let mainTableView = SDGTableView(frame: view.frame, aDelegete: self)
         view.addSubview(mainTableView)
-        mainTableView.snp_makeConstraints { $0.edges.equalToSuperview() }
+        mainTableView.snp.makeConstraints { $0.edges.equalToSuperview() }
         mainTableView.register(UINib(nibName: "SDGHomeTableViewCell", bundle: Bundle.main), forCellReuseIdentifier: SDGHomeTableViewCell.cellReuseIdentifier)
         
         let tableHeader = SDGHomeTableHeader(

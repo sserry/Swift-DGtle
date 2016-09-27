@@ -13,7 +13,7 @@ class SDGMsgLikeChildViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        view.backgroundColor = UIColor.colorWithHexString("112323")
+        view.backgroundColor = UIColor.colorWithHexString(stringToConvert: "112323")
     }
 
 }

@@ -23,7 +23,7 @@ class ButtonsBar: UIView {
     var delegate: ButtonsBarDelegate?
     var buttonsList: [UIButton] = []
     var lineH: CGFloat = 2.4
-    var normalColor: UIColor = UIColor.colorWithHexString("9A9A9A")
+    var normalColor: UIColor = UIColor.colorWithHexString(stringToConvert: "9A9A9A")
     var selectedColor: UIColor = SDGBlue
     
     fileprivate var barLeftMar: CGFloat {
@@ -44,7 +44,7 @@ class ButtonsBar: UIView {
         stackView.spacing = margin
         
         addSubview(stackView)
-        stackView.snp_makeConstraints { $0.center.equalToSuperview() }
+        stackView.snp.makeConstraints { $0.center.equalToSuperview() }
         
         underline.frame = CGRect(x: 0, y: gg_h - lineH, width: buttonW, height: lineH)
         underline.backgroundColor = selectedColor

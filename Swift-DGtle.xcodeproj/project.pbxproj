@@ -77,6 +77,8 @@
 		181EB8941D72AD910005B991 /* SDGUserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 181EB8901D72AD910005B991 /* SDGUserTableViewCell.xib */; };
 		181EB8951D72AD910005B991 /* SDGUserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 181EB8901D72AD910005B991 /* SDGUserTableViewCell.xib */; };
 		181EB8961D72AD910005B991 /* SDGUserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 181EB8901D72AD910005B991 /* SDGUserTableViewCell.xib */; };
+		1821E7A91D9A1E0A0049DDB6 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1821E7A81D9A1E0A0049DDB6 /* SnapKit.framework */; };
+		1821E7AA1D9A1E0E0049DDB6 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1821E7A81D9A1E0A0049DDB6 /* SnapKit.framework */; };
 		18857C2D1D75D21B0008661B /* SDGGroupLeftChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18857C2C1D75D21B0008661B /* SDGGroupLeftChildViewController.swift */; };
 		18857C2F1D75D2280008661B /* SDGGroupRightChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18857C2E1D75D2280008661B /* SDGGroupRightChildViewController.swift */; };
 		18857C341D771AE70008661B /* SDGPageProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18857C331D771AE70008661B /* SDGPageProtocol.swift */; };
@@ -149,6 +151,8 @@
 		181EB8871D7286980005B991 /* SDGZoomHeaderTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDGZoomHeaderTableView.swift; sourceTree = "<group>"; };
 		181EB88F1D72AD910005B991 /* SDGUserTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDGUserTableViewCell.swift; sourceTree = "<group>"; };
 		181EB8901D72AD910005B991 /* SDGUserTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SDGUserTableViewCell.xib; sourceTree = "<group>"; };
+		1821E7A51D9A1DE40049DDB6 /* Pods_Swift_DGtle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods_Swift_DGtle.framework; path = "../../../../../Library/Developer/Xcode/DerivedData/Swift-DGtle-gfmwkksdxjapliaedscwxviksjhg/Build/Products/Debug-iphonesimulator/Pods_Swift_DGtle.framework"; sourceTree = "<group>"; };
+		1821E7A81D9A1E0A0049DDB6 /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = "../../../../../Library/Developer/Xcode/DerivedData/Swift-DGtle-gfmwkksdxjapliaedscwxviksjhg/Build/Products/Debug-iphonesimulator/SnapKit/SnapKit.framework"; sourceTree = "<group>"; };
 		18857C2C1D75D21B0008661B /* SDGGroupLeftChildViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDGGroupLeftChildViewController.swift; sourceTree = "<group>"; };
 		18857C2E1D75D2280008661B /* SDGGroupRightChildViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDGGroupRightChildViewController.swift; sourceTree = "<group>"; };
 		18857C331D771AE70008661B /* SDGPageProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDGPageProtocol.swift; sourceTree = "<group>"; };
@@ -184,6 +188,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1821E7A91D9A1E0A0049DDB6 /* SnapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -191,6 +196,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1821E7AA1D9A1E0E0049DDB6 /* SnapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -442,6 +448,8 @@
 		99578595C7E95866DEF5ACF8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1821E7A81D9A1E0A0049DDB6 /* SnapKit.framework */,
+				1821E7A51D9A1DE40049DDB6 /* Pods_Swift_DGtle.framework */,
 				18E633551D9994B90056097C /* SnapKit.framework */,
 				D35FAD27BF6BD69747611CBC /* Pods_Swift_DGtle.framework */,
 			);
@@ -654,7 +662,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -824,7 +832,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -867,7 +875,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};

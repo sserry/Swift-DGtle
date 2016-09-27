@@ -42,7 +42,7 @@ class SDGMineViewController: UIViewController {
         userMenuTable?.delegate = self
         userMenuTable?.dataSource = self
         view.addSubview(userMenuTable!)
-        userMenuTable?.snp_makeConstraints { $0.edges.equalToSuperview() }
+        userMenuTable?.snp.makeConstraints { $0.edges.equalToSuperview() }
         userMenuTable?.tableHeaderView = SDGUserUnloginHeader(frame: CGRect(x: 0, y: 0, width: SCREEN_WIDTH, height: winH))
     }
 
@@ -85,7 +85,7 @@ extension SDGMineViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let header: UIView = {
             let header = UIView(frame: CGRect(x: 0, y: 0, width: view.gg_w, height: 20))
-            header.backgroundColor = UIColor.colorWithHexString("CCCCCC")
+            header.backgroundColor = UIColor.colorWithHexString(stringToConvert: "CCCCCC")
             return header
         }()
         

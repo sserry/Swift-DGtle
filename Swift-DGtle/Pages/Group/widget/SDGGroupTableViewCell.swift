@@ -19,7 +19,7 @@ class SDGGroupTableViewCell: UITableViewCell, SDTableCellConfigureProtocol {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        EasyDivideLineManager.sharedManager.lineColor = UIColor.colorWithHexString("f1f1f1")
+        EasyDivideLineManager.sharedManager.lineColor = UIColor.colorWithHexString(stringToConvert: "f1f1f1")
         headerView.addBottomDivideLineWithDoubleInsets(10)
         footerView.addTopDivideLineWithDoubleInsets(10)
         selectionStyle = .none

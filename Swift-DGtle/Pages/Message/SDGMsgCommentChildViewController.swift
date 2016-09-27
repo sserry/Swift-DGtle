@@ -13,7 +13,7 @@ class SDGMsgCommentChildViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        view.backgroundColor = UIColor.colorWithHexString("a983b3")
+        view.backgroundColor = UIColor.colorWithHexString(stringToConvert: "a983b3")
     }
 
 }
