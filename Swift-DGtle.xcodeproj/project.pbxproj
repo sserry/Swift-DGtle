@@ -79,6 +79,7 @@
 		181EB8961D72AD910005B991 /* SDGUserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 181EB8901D72AD910005B991 /* SDGUserTableViewCell.xib */; };
 		1821E7A91D9A1E0A0049DDB6 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1821E7A81D9A1E0A0049DDB6 /* SnapKit.framework */; };
 		1821E7AA1D9A1E0E0049DDB6 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1821E7A81D9A1E0A0049DDB6 /* SnapKit.framework */; };
+		1846BEBF1D9ACDA8001BE873 /* SDGroupShowMoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1846BEBE1D9ACDA8001BE873 /* SDGroupShowMoreCell.swift */; };
 		18857C2D1D75D21B0008661B /* SDGGroupLeftChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18857C2C1D75D21B0008661B /* SDGGroupLeftChildViewController.swift */; };
 		18857C2F1D75D2280008661B /* SDGGroupRightChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18857C2E1D75D2280008661B /* SDGGroupRightChildViewController.swift */; };
 		18857C341D771AE70008661B /* SDGPageProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18857C331D771AE70008661B /* SDGPageProtocol.swift */; };
@@ -95,6 +96,8 @@
 		18B339F31D74116900683893 /* ButtonsBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B339F21D74116900683893 /* ButtonsBar.swift */; };
 		18B33A371D74778B00683893 /* SDGRadioButtonProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B33A361D74778B00683893 /* SDGRadioButtonProtocol.swift */; };
 		18E633561D9994B90056097C /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18E633551D9994B90056097C /* SnapKit.framework */; };
+		18EE20461D9AAE1E0084205E /* SDGGroupMoreCellSectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18EE20451D9AAE1E0084205E /* SDGGroupMoreCellSectionView.xib */; };
+		18EE20481D9AB2820084205E /* SDGGroupMoreCellSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EE20471D9AB2820084205E /* SDGGroupMoreCellSectionView.swift */; };
 		E3D4981F455A99ACB7EF819B /* Pods_Swift_DGtle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D35FAD27BF6BD69747611CBC /* Pods_Swift_DGtle.framework */; };
 /* End PBXBuildFile section */
 
@@ -153,6 +156,7 @@
 		181EB8901D72AD910005B991 /* SDGUserTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SDGUserTableViewCell.xib; sourceTree = "<group>"; };
 		1821E7A51D9A1DE40049DDB6 /* Pods_Swift_DGtle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods_Swift_DGtle.framework; path = "../../../../../Library/Developer/Xcode/DerivedData/Swift-DGtle-gfmwkksdxjapliaedscwxviksjhg/Build/Products/Debug-iphonesimulator/Pods_Swift_DGtle.framework"; sourceTree = "<group>"; };
 		1821E7A81D9A1E0A0049DDB6 /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = "../../../../../Library/Developer/Xcode/DerivedData/Swift-DGtle-gfmwkksdxjapliaedscwxviksjhg/Build/Products/Debug-iphonesimulator/SnapKit/SnapKit.framework"; sourceTree = "<group>"; };
+		1846BEBE1D9ACDA8001BE873 /* SDGroupShowMoreCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDGroupShowMoreCell.swift; sourceTree = "<group>"; };
 		18857C2C1D75D21B0008661B /* SDGGroupLeftChildViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDGGroupLeftChildViewController.swift; sourceTree = "<group>"; };
 		18857C2E1D75D2280008661B /* SDGGroupRightChildViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDGGroupRightChildViewController.swift; sourceTree = "<group>"; };
 		18857C331D771AE70008661B /* SDGPageProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDGPageProtocol.swift; sourceTree = "<group>"; };
@@ -169,6 +173,8 @@
 		18B339F21D74116900683893 /* ButtonsBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonsBar.swift; sourceTree = "<group>"; };
 		18B33A361D74778B00683893 /* SDGRadioButtonProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDGRadioButtonProtocol.swift; sourceTree = "<group>"; };
 		18E633551D9994B90056097C /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = "Pods/../build/Debug-iphoneos/SnapKit/SnapKit.framework"; sourceTree = "<group>"; };
+		18EE20451D9AAE1E0084205E /* SDGGroupMoreCellSectionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SDGGroupMoreCellSectionView.xib; sourceTree = "<group>"; };
+		18EE20471D9AB2820084205E /* SDGGroupMoreCellSectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDGGroupMoreCellSectionView.swift; sourceTree = "<group>"; };
 		511200771F8432010F6ED289 /* Pods-Swift-DGtle.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift-DGtle.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Swift-DGtle/Pods-Swift-DGtle.debug.xcconfig"; sourceTree = "<group>"; };
 		6D7AB22051D18A3E743DB01C /* Pods-Swift-DGtle.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift-DGtle.release.xcconfig"; path = "Pods/Target Support Files/Pods-Swift-DGtle/Pods-Swift-DGtle.release.xcconfig"; sourceTree = "<group>"; };
 		D35FAD27BF6BD69747611CBC /* Pods_Swift_DGtle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Swift_DGtle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -433,6 +439,9 @@
 			children = (
 				18857C421D7873450008661B /* SDGGroupTableViewCell.swift */,
 				18857C431D7873450008661B /* SDGGroupTableViewCell.xib */,
+				18EE20451D9AAE1E0084205E /* SDGGroupMoreCellSectionView.xib */,
+				18EE20471D9AB2820084205E /* SDGGroupMoreCellSectionView.swift */,
+				1846BEBE1D9ACDA8001BE873 /* SDGroupShowMoreCell.swift */,
 			);
 			path = widget;
 			sourceTree = "<group>";
@@ -583,6 +592,7 @@
 				18B339F11D73E07800683893 /* SDGUserUnloginHeader.xib in Resources */,
 				181C60691D702BD2003356E4 /* Podfile in Resources */,
 				181C604E1D70299B003356E4 /* Main.storyboard in Resources */,
+				18EE20461D9AAE1E0084205E /* SDGGroupMoreCellSectionView.xib in Resources */,
 				181EB8941D72AD910005B991 /* SDGUserTableViewCell.xib in Resources */,
 				181C60481D70299B003356E4 /* Assets.xcassets in Resources */,
 				181C604B1D70299B003356E4 /* LaunchScreen.storyboard in Resources */,
@@ -674,6 +684,7 @@
 			files = (
 				181EB8611D7181470005B991 /* SDGHomeTableHeader.swift in Sources */,
 				181C60771D703625003356E4 /* UIColorExt.swift in Sources */,
+				18EE20481D9AB2820084205E /* SDGGroupMoreCellSectionView.swift in Sources */,
 				181C606F1D703029003356E4 /* SDGHomeViewController.swift in Sources */,
 				181EB8831D71FF430005B991 /* UINavigationBarExt.swift in Sources */,
 				181EB86D1D7199170005B991 /* EasyDivideLine.swift in Sources */,
@@ -696,6 +707,7 @@
 				181EB8591D7164740005B991 /* SDGRereshHeader.swift in Sources */,
 				18857C481D7873BC0008661B /* SDGGroupCellModel.swift in Sources */,
 				181EB8881D7286980005B991 /* SDGZoomHeaderTableView.swift in Sources */,
+				1846BEBF1D9ACDA8001BE873 /* SDGroupShowMoreCell.swift in Sources */,
 				181EB8631D718AC00005B991 /* LayoutExt.swift in Sources */,
 				181EB8911D72AD910005B991 /* SDGUserTableViewCell.swift in Sources */,
 				18B339F31D74116900683893 /* ButtonsBar.swift in Sources */,

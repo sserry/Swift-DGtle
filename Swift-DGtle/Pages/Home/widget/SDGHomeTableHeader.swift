@@ -28,12 +28,12 @@ class SDGHomeTableHeader: UIView {
         super.draw(rect)
         
         addSubview(bannerScrollView)
-        bannerScrollView.gg_equalWidthLayoutWithTopOffset(topOffset: 0, andHeight: SDGHomeTableHeader.bannerImageH)
+        bannerScrollView.gg_equalWidth(withTopOffset: 0, andHeight: SDGHomeTableHeader.bannerImageH)
         bannerScrollView.pageDotColor = UIColor.white.withAlphaComponent(0.4)
         
         bannerTextLabel.backgroundColor = UIColor.white
         addSubview(bannerTextLabel)
-        bannerTextLabel.gg_equalWBLayoutWithHeight(SDGHomeTableHeader.bannerLabelH)
+        bannerTextLabel.gg_equalWB(withHeight: SDGHomeTableHeader.bannerLabelH)
         
         addBottomDivideLine()
     }

@@ -18,6 +18,8 @@ class SDGGroupRightChildViewController: UIViewController {
         mainTable = SDGTableView(frame: CGRect(x: 0, y: 0, width: view.gg_w, height: view.gg_h), aDelegete: self)
         mainTable.contentInset = UIEdgeInsetsMake(NAV_BAR_H, 0, TAB_BAR_H, 0)
         mainTable.register(UINib(nibName: "SDGGroupTableViewCell", bundle: Bundle.main), forCellReuseIdentifier: SDGGroupTableViewCell.cellReuseIdentifier)
+        mainTable.register(SDGroupShowMoreCell.self, forCellReuseIdentifier: SDGroupShowMoreCell.cellReuseIdentifier)
+        
         view.addSubview(mainTable)
         
         let tableHeader = SDGHomeTableHeader(
@@ -45,7 +47,9 @@ extension SDGGroupRightChildViewController: UITableViewDelegate, UITableViewData
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return SDGGroupTableViewCell.configureCellForTableView(tableView, aModelSource: SDGGroupCellModel())
+        return indexPath.section == 0
+               ? SDGroupShowMoreCell.configureCellForTableView(tableView, aModelSource: navigationController as! SDGNavigationController)
+               : SDGGroupTableViewCell.configureCellForTableView(tableView, aModelSource: SDGGroupCellModel())
     }
     
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
@@ -53,11 +57,13 @@ extension SDGGroupRightChildViewController: UITableViewDelegate, UITableViewData
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 13
+        return section == 0 || section == 1
+               ? 0.01
+               : 13
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 330
+        return indexPath.row == 0 ? SDGroupShowMoreCell.cellH : 330
     }
 }
 
