@@ -63,7 +63,7 @@ extension SDGGroupRightChildViewController: UITableViewDelegate, UITableViewData
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return indexPath.row == 0 ? SDGroupShowMoreCell.cellH : 330
+        return indexPath.row == 0 ? SDGroupShowMoreCell.kCellH : 330
     }
 }
 
