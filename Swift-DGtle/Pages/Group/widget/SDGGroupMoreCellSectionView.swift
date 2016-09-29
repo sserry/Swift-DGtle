@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SDGGroupMoreCellSectionView: UIView {
+class SDGGroupMoreCellSectionView: UIView, SDGLoadViewFromNibProtocol{
 
     @IBOutlet weak var sectionTitle: UILabel!
     @IBOutlet weak var sectionSubtitle: UILabel!
@@ -27,16 +27,6 @@ class SDGGroupMoreCellSectionView: UIView {
         sectionTitle.text = title
         sectionSubtitle.text = subtitle
         showMoreBtnClicked = block
-    }
-    
-    func loadViewFromNib() {
-        
-        if let nib = Bundle.main.loadNibNamed("\(type(of: self))", owner: self, options: nil) {
-            let view = nib[0] as! SDGGroupMoreCellSectionView
-            addSubview(view)
-            view.frame = bounds
-        }
-        
     }
     
 

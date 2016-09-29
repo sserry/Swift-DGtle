@@ -25,6 +25,13 @@ class SDGMineViewController: UIViewController {
         setMenuTable()
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        navigationController?.navigationBar.gg_reset()
+        
+    }
+    
     func setNavigationBar() {
         navigationController?.navigationBar.setBarTransparent()
         navigationItem.rightBarButtonItem = UIBarButtonItem.barBtnItemWithNmlImg(UIImage(named: "settings_new"),

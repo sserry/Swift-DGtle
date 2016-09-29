@@ -8,6 +8,9 @@
 
 import UIKit
 
+/**
+ *  分页控制器协议
+ */
 protocol SDGPageProtocol: class {
     var vcArray: [UIViewController] { get }
     var horizentalScrollView: UIScrollView { get }

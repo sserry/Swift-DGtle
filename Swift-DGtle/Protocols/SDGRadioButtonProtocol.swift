@@ -8,6 +8,9 @@
 
 import UIKit
 
+/**
+ *  Radio Button Container Protocol
+ */
 protocol SDGRadioButtonProtocol: class {
     var buttonsList: [UIButton] { get }
     func radioButtonDidSelectedIndex(_ index: Int?)

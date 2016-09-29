@@ -19,7 +19,7 @@ class SDGTableView: UITableView {
         super.draw(rect)
         backgroundColor = GLOBAL_GRAY_LIGHT
         tableFooterView = UIView()
-        
+        showsVerticalScrollIndicator = false
         let refreshHeader = SDGRereshHeader(refreshingTarget: self, refreshingAction: #selector(SDGTableView.tableViewDidRefreshed(_:)))
         
         mj_header = refreshHeader

@@ -23,17 +23,11 @@ class SDGroupShowMoreCell: UITableViewCell, SDTableCellConfigureProtocol {
     }
     
     //current navigation view controller
-    fileprivate var curNVC = SDGNavigationController() {
+    fileprivate var curVC = SDGGroupRightChildViewController() {
         didSet {
-            upperSection.showMoreBtnClicked = { [unowned curNVC] in
-                //MARK: TODO Implemented later
-                curNVC.pushViewController(SDGMineViewController(), animated: true)
-            }
+            upperSection.showMoreBtnClicked = { [unowned curVC] in curVC.state = .goNewGroups }
             
-            lowerSection.showMoreBtnClicked = { [unowned curNVC] in
-                //MARK: TODO Implemented later
-                curNVC.pushViewController(SDGMineViewController(), animated: true)
-            }
+            lowerSection.showMoreBtnClicked = { [unowned curVC] in curVC.state = .goNewGroups }
         }
     }
     
@@ -56,6 +50,8 @@ class SDGroupShowMoreCell: UITableViewCell, SDTableCellConfigureProtocol {
     override func draw(_ rect: CGRect) {
         super.draw(rect)
         
+        selectionStyle = .none
+        
         backgroundColor = UIColor.colorWithHexString(stringToConvert: "EEEEEE")
         
         addSubview(upperSection)
@@ -69,8 +65,8 @@ class SDGroupShowMoreCell: UITableViewCell, SDTableCellConfigureProtocol {
         lowerSection.gg_equalWB(withHeight: SDGroupShowMoreCell.kSectionH)
     }
     
-    func updateDataSource(_ modelSource: SDGNavigationController) {
-        curNVC = modelSource
+    func updateDataSource(_ modelSource: SDGGroupRightChildViewController) {
+        curVC = modelSource
     }
 
 }
