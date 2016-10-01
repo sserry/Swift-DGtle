@@ -21,7 +21,6 @@ protocol SDGPageProtocol: class {
 extension SDGPageProtocol where Self: UIScrollViewDelegate, Self: UIViewController, Self: ButtonsBarDelegate {
 
     func setupControllers() {
-        view.backgroundColor = GLOBAL_GRAY_LIGHT
         
         navigationItem.titleView = buttonsBar
         buttonsBar.delegate = self

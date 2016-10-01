@@ -25,9 +25,9 @@ class SDGroupShowMoreCell: UITableViewCell, SDTableCellConfigureProtocol {
     //current navigation view controller
     fileprivate var curVC = SDGGroupRightChildViewController() {
         didSet {
-            upperSection.showMoreBtnClicked = { [unowned curVC] in curVC.state = .goNewGroups }
+            upperSection.showMoreBtnClicked = { [unowned curVC] in curVC.go(to: .goNewGroups) }
             
-            lowerSection.showMoreBtnClicked = { [unowned curVC] in curVC.state = .goNewGroups }
+            lowerSection.showMoreBtnClicked = { [unowned curVC] in curVC.go(to: .goNewGroups) }
         }
     }
     

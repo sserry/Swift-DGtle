@@ -1,5 +1,5 @@
 //
-//  SDGMsgLikeChildViewController.swift
+//  SDGMsgPrivateChildViewControlle.swift
 //  Swift-DGtle
 //
 //  Created by apple on 16/8/31.
@@ -8,21 +8,22 @@
 
 import UIKit
 
-class SDGMsgLikeChildViewController: SDGBaseViewController, SDGViewControllerEmptyVisible {
+class SDGMsgPrivateChildViewController: SDGBaseViewController, SDGViewControllerEmptyVisible {
 
-    var emptyDataType: SDGEmptyDataType = .like
+    var emptyDataType: SDGEmptyDataType {
+        return .message
+    }
     
     var targetTableView: UITableView = SDGTableView(frame: BOUNDS_WITHOUT_NAV_TAB, style: .grouped)
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         configureEmptyDataView()
     }
 
 }
 
-extension SDGMsgLikeChildViewController: UITableViewDataSource, UITableViewDelegate {
+extension SDGMsgPrivateChildViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         return UITableViewCell()
@@ -38,9 +39,9 @@ extension SDGMsgLikeChildViewController: UITableViewDataSource, UITableViewDeleg
     
 }
 
-extension SDGMsgLikeChildViewController: SDGTableViewDelegate {
-    
+extension SDGMsgPrivateChildViewController: SDGTableViewDelegate {
     func refreshTableView(_ tableView: SDGTableView) {
         delayExcute { tableView.mj_header.endRefreshing() }
     }
 }
+

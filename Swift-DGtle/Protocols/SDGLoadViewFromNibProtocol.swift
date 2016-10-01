@@ -16,9 +16,12 @@ extension SDGLoadViewFromNibProtocol where Self: UIView {
     
     func loadViewFromNib() {
         if let nib = Bundle.main.loadNibNamed("\(type(of: self))", owner: self, options: nil) {
-            let view = nib[0] as! Self
-            addSubview(view)
-            view.frame = bounds
+            if let view = nib[0] as? UIView {
+                addSubview(view)
+                view.frame = bounds
+            }
+            
+            
         }
         
     }

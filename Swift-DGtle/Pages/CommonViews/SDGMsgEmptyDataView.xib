@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SDGMsgEmptyDataView" customModule="Swift_DGtle" customModuleProvider="target">
+            <connections>
+                <outlet property="emptyImageView" destination="FV0-eQ-A0n" id="And-1m-WFh"/>
+                <outlet property="subTitleLabel" destination="A01-DF-qru" id="UwW-qQ-Oh8"/>
+                <outlet property="titleLabel" destination="dJO-Kf-VYN" id="DAd-EH-6vz"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="暂未收到任何评论提醒" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dJO-Kf-VYN">
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                    <color key="textColor" red="0.20784313725490194" green="0.63921568627450975" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="当你发布的内容被回复时，这里将会显示你所收到的通知" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A01-DF-qru">
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="11"/>
+                    <color key="textColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pic_comment_new" translatesAutoresizingMaskIntoConstraints="NO" id="FV0-eQ-A0n">
+                    <constraints>
+                        <constraint firstAttribute="width" constant="155" id="iF9-hO-w7t"/>
+                        <constraint firstAttribute="height" constant="155" id="lhI-Sp-WYB"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="0.94509803921568625" green="0.94509803921568625" blue="0.95294117647058818" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="A01-DF-qru" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="66" id="44l-8T-xnx"/>
+                <constraint firstItem="dJO-Kf-VYN" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="CLz-Df-otz"/>
+                <constraint firstAttribute="trailing" secondItem="A01-DF-qru" secondAttribute="trailing" constant="66" id="Z88-9c-UO2"/>
+                <constraint firstItem="FV0-eQ-A0n" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="dIj-yw-J0e"/>
+                <constraint firstItem="dJO-Kf-VYN" firstAttribute="top" secondItem="FV0-eQ-A0n" secondAttribute="bottom" constant="20" id="hTX-7O-0ER"/>
+                <constraint firstItem="A01-DF-qru" firstAttribute="top" secondItem="dJO-Kf-VYN" secondAttribute="bottom" constant="12" id="mnM-zX-T16"/>
+                <constraint firstItem="FV0-eQ-A0n" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" constant="-48" id="xgN-g2-qAM"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <point key="canvasLocation" x="26.5" y="52.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="pic_comment_new" width="130" height="130"/>
+    </resources>
+</document>

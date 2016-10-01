@@ -9,44 +9,11 @@
 import UIKit
 import SDCycleScrollView
 
-/**
- *  小组-发现 路由
- */
-enum SDGroupRightViewControllerRoute {
 
-    case goNewGroups
-    case goHotTopics
-    case goAGroup(groupID: String)
-    case goBannerTopic(topicID: String)
-    case goTopicDetail(topicID: String)
-}
-
-class SDGGroupRightChildViewController: UIViewController {
+class SDGGroupRightChildViewController: SDGBaseViewController, SDGRouteProtocol {
     
     var mainTable = SDGTableView()
     
-    
-    /// 一个尝试 通过路由器来控制页面跳转 便于集中管理跳转代码 并且将跳转中可能涉及到的引用语义逻辑转换成值语义逻辑
-    var state: SDGroupRightViewControllerRoute? {
-        didSet {
-            if let st = state {
-                switch st {
-                case .goNewGroups:
-                    navigationController?.pushViewController(SDGGroupLeftChildViewController(), animated: true)
-                    break
-                case .goHotTopics:
-                    break
-                case .goAGroup(let groupID):
-                    break
-                case .goBannerTopic(let topicID):
-                    break
-                case .goTopicDetail(let topicID):
-                    break
-                }
-            }
-        }
-    }
-
     override func viewDidLoad() {
         super.viewDidLoad()
         mainTable = SDGTableView(frame: CGRect(x: 0, y: 0, width: view.gg_w, height: view.gg_h), aDelegete: self)

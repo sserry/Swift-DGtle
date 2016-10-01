@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SDGMineViewController: UIViewController {
+class SDGMineViewController: SDGBaseViewController {
 
     var userMenuTable: SDGZoomHeaderTableView?
     let iconNameArr = [ "article_new", "collection_new", "setting_draft_new", "download_new", "forum", "ic_loyalty"]
@@ -16,14 +16,17 @@ class SDGMineViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = GLOBAL_GRAY_LIGHT
         
         automaticallyAdjustsScrollViewInsets = false
-        
-        setNavigationBar()
-        
+        setNeedsStatusBarAppearanceUpdate()
         setMenuTable()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        setNavigationBar()
+    }
+    
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
@@ -33,6 +36,8 @@ class SDGMineViewController: UIViewController {
     }
     
     func setNavigationBar() {
+        //触发状态栏上面的字变白
+        navigationController?.navigationBar.barStyle = .black
         navigationController?.navigationBar.setBarTransparent()
         navigationItem.rightBarButtonItem = UIBarButtonItem.barBtnItemWithNmlImg(UIImage(named: "settings_new"),
                                                                                  selImg: UIImage(named: "settings_new"),

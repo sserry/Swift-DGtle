@@ -32,7 +32,7 @@ class SDGTabController: UITabBarController {
         
         let msVC = SDGMsgCommentChildViewController()
         let likeVC = SDGMsgLikeChildViewController()
-        let pmVC = SDGMsgPrivateChildViewControlle()
+        let pmVC = SDGMsgPrivateChildViewController()
         let btnBar = ButtonsBar(frame: CGRect(x: 0, y: 0, width: 205, height: 44), titlesArray: ["评论", "赞", "私信"], buttonMargin: 38)
         let msgVC = SDGPageViewController(bottonBar: btnBar, viewControllers: [msVC, likeVC, pmVC])
         let msgBarItem = UITabBarItem(title: "消息", image: UIImage(named: "tab_inbox"), selectedImage: UIImage(named: "tab_inbox_act"))

@@ -8,13 +8,12 @@
 
 import UIKit
 
-class SDGGroupLeftChildViewController: UIViewController {
+class SDGGroupLeftChildViewController: SDGBaseViewController {
     
     var mainTable = SDGTableView()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = GLOBAL_GRAY_LIGHT
         
         mainTable = SDGTableView(frame: CGRect(x: 0, y: 0, width: view.gg_w, height: view.gg_h), aDelegete: self)
         mainTable.contentInset = UIEdgeInsetsMake(NAV_BAR_H, 0, TAB_BAR_H, 0)

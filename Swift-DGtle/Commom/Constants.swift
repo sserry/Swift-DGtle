@@ -10,18 +10,24 @@ import UIKit
 import SnapKit
 import MJRefresh
 
+
+
+
 let SCREEN_WIDTH                            = UIScreen.main.bounds.width
 let SCREEN_HEIGHT                           = UIScreen.main.bounds.height
 let SCREEN_SIZE                             = UIScreen.main.bounds
+let BOUNDS_WITHOUT_NAV                      = CGRect(x: 0, y: NAV_BAR_H, width: SCREEN_WIDTH, height: SCREEN_HEIGHT - NAV_BAR_H)
+let BOUNDS_WITHOUT_NAV_TAB                  = CGRect(x: 0, y: NAV_BAR_H, width: SCREEN_WIDTH, height: SCREEN_HEIGHT - NAV_BAR_H - TAB_BAR_H)
 let RESIZE_FACTOR                           = SCREEN_WIDTH / 375.0
 
 let SINGLE_LINE_WIDTH                       = 1 / UIScreen.main.scale
+
 let NAV_BAR_H: CGFloat                      = 64.0
 let TAB_BAR_H: CGFloat                      = 50.0
 let DEFAULT_CELL_HEIGHT: CGFloat            = 44.0
 let DEFAULT_TABLE_VIEW_HEADER_H: CGFloat    = 14
 
-let SDGBlue                                 = UIColor.colorWithHexString(stringToConvert: "3579f6")
+let SDGBlue                                 = UIColor.colorWithHexString(stringToConvert: "35A3F6")
 let GLOBAL_GRAY_LIGHT                       = UIColor.colorWithHexString(stringToConvert: "f1f1f3")
 let SINGLE_LINE_COLOR                       = UIColor.colorWithHexString(stringToConvert: "cccccc")
 let DEEP_TEXT_GRAY                          = UIColor.colorWithHexString(stringToConvert: "333333")

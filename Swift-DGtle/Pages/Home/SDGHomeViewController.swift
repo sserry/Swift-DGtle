@@ -9,11 +9,10 @@
 import UIKit
 import SDCycleScrollView
 
-class SDGHomeViewController: UIViewController {
+class SDGHomeViewController: SDGBaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = GLOBAL_GRAY_LIGHT
         
         setNavigationBar()
         
