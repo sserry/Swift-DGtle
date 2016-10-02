@@ -17,6 +17,7 @@ class SDGLoginViewController: SDGBaseViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
         navigationController?.navigationBar.barStyle = .black
         navigationController?.navigationBar.setBarTransparent()
         navigationItem.leftBarButtonItem = UIBarButtonItem.barBtnItemWithNmlImg(UIImage(named: "nav_back_white"),

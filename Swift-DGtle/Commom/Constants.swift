@@ -10,9 +10,6 @@ import UIKit
 import SnapKit
 import MJRefresh
 
-
-
-
 let SCREEN_WIDTH                            = UIScreen.main.bounds.width
 let SCREEN_HEIGHT                           = UIScreen.main.bounds.height
 let SCREEN_SIZE                             = UIScreen.main.bounds
@@ -40,4 +37,15 @@ public func delayExcute( _ block: @escaping () -> () ) {
         block()
     }
 
+}
+
+var currentNavigationController: SDGNavigationController? {
+    get {
+        if let ad     = UIApplication.shared.delegate as? AppDelegate,
+           let curTC  = ad.window?.rootViewController as? SDGTabController,
+           let curNVC = curTC.selectedViewController  as? SDGNavigationController {
+            return curNVC
+        }
+        return nil
+    }
 }

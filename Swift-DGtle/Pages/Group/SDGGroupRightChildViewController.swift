@@ -49,7 +49,7 @@ extension SDGGroupRightChildViewController: UITableViewDelegate, UITableViewData
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         return indexPath.section == 0
-               ? SDGroupShowMoreCell.configureCellForTableView(tableView, aModelSource: self)
+               ? SDGroupShowMoreCell.configureCellForTableView(tableView, aModelSource: ["1" as AnyObject, "2" as AnyObject, "3" as AnyObject, "4" as AnyObject, "5" as AnyObject, "6" as AnyObject, "7" as AnyObject])
                : SDGGroupTableViewCell.configureCellForTableView(tableView, aModelSource: SDGGroupCellModel())
     }
     

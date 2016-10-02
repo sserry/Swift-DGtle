@@ -21,11 +21,11 @@ enum SDGPageStatus {
     case goLogin
 }
 
-protocol SDGRouteProtocol: class {
+@objc protocol SDGRouteProtocol: class {
     
 }
 
-extension SDGRouteProtocol where Self: UIViewController {
+extension SDGRouteProtocol {
     
     func go(to state: SDGPageStatus) {
         switch state {
@@ -46,29 +46,28 @@ extension SDGRouteProtocol where Self: UIViewController {
             break
         }
     }
-
-}
-
-extension UIViewController {
-
+    
+    
     func push(to page: UIViewController) {
         push(to: page, animated: true)
     }
     
     func push(to page: UIViewController, animated: Bool) {
-        navigationController?.pushViewController(page, animated: animated)
+        currentNavigationController?.pushViewController(page, animated: animated)
     }
     
     func present(toPage page: UIViewController, animated: Bool, completion: (() -> Void)?) {
-        navigationController?.present(page, animated: animated, completion: completion)
+        currentNavigationController?.present(page, animated: animated, completion: completion)
     }
     
     func present(_ page: UIViewController) {
         present(toPage: page, animated: true, completion: nil)
     }
     
+}
+
+extension UIViewController {
     func dismissCurrentNavigation() {
         navigationController?.dismiss(animated: true, completion: nil)
     }
-    
 }

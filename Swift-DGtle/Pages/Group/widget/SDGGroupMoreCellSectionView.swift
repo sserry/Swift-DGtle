@@ -8,25 +8,28 @@
 
 import UIKit
 
-class SDGGroupMoreCellSectionView: UIView, SDGLoadViewFromNibProtocol{
+class SDGGroupMoreCellSectionView: UIView,
+                                   SDGLoadViewFromNibProtocol,
+                                   SDGRouteProtocol {
 
     @IBOutlet weak var sectionTitle: UILabel!
     @IBOutlet weak var sectionSubtitle: UILabel!
     @IBAction func showMore(_ sender: UIButton) {
-        if let closure = showMoreBtnClicked { closure() }
+        if let status = targetStatus { go(to: status) }
     }
     
-    var showMoreBtnClicked: (() -> Void)?
+    var targetStatus: SDGPageStatus?
     
     convenience init(withTitle title: String!,
                      andSubtitle subtitle: String!,
-                     showMoreBlock  block: @escaping () -> Void) {
+                     targetStatus  status: SDGPageStatus) {
         self.init(frame: CGRect(x: 0, y: 0, width: SCREEN_WIDTH, height: 66))
         
         loadViewFromNib()
         sectionTitle.text = title
         sectionSubtitle.text = subtitle
-        showMoreBtnClicked = block
+        targetStatus = status
+        
     }
     
 
