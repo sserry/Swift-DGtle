@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SDGMineViewController: SDGBaseViewController {
+class SDGMineViewController: SDGBaseViewController, SDGRouteProtocol {
 
     var userMenuTable: SDGZoomHeaderTableView?
     let iconNameArr = [ "article_new", "collection_new", "setting_draft_new", "download_new", "forum", "ic_loyalty"]
@@ -28,8 +28,8 @@ class SDGMineViewController: SDGBaseViewController {
     }
     
     
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
         
         navigationController?.navigationBar.gg_reset()
         
@@ -55,7 +55,9 @@ class SDGMineViewController: SDGBaseViewController {
         userMenuTable?.dataSource = self
         view.addSubview(userMenuTable!)
         userMenuTable?.snp.makeConstraints { $0.edges.equalToSuperview() }
-        userMenuTable?.tableHeaderView = SDGUserUnloginHeader(frame: CGRect(x: 0, y: 0, width: SCREEN_WIDTH, height: winH))
+        userMenuTable?.tableHeaderView = SDGUserUnloginHeader(frame: CGRect(x: 0, y: 0, width: SCREEN_WIDTH, height: winH)) { [unowned self] in
+            self.go(to: .goLogin)
+        }
     }
 
 

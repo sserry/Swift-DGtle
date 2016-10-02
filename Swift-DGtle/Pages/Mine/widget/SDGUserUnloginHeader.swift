@@ -10,7 +10,7 @@ import UIKit
 
 class SDGUserUnloginHeader: UIView {
 
-    var loginBlock: (() -> ())?
+    var loginBlock: (() -> Void)?
     var view = UIView()
     @IBAction func doLogin(_ sender: AnyObject) {
         if let clousure = loginBlock {
@@ -21,6 +21,11 @@ class SDGUserUnloginHeader: UIView {
     override func draw(_ rect: CGRect) {
         super.draw(rect)
         view.snp.makeConstraints { $0.edges.equalToSuperview() }
+    }
+    
+    convenience init(frame: CGRect,loginClosure:  (() -> Void)? ) {
+        self.init(frame: frame)
+        loginBlock = loginClosure
     }
  
     override init(frame: CGRect) {

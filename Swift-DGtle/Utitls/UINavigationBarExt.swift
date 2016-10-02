@@ -8,25 +8,19 @@
 
 import UIKit
 
-extension UINavigationBar {
+fileprivate var overlayKey: String = "NAV_OVERLAY_KEY"
 
-    static var overlayKey: String {
-        get {
-            return "OVERLAY_KEY"
-        }
-        
-        set { }
-    }
+extension UINavigationBar {
     
     // Since adding a stored value property for a class in it's extension is forbidden,
     // use runtime methods adding a new stored value property for a class.
     var overlay: UIView? {
         get {
-            return objc_getAssociatedObject(self, UINavigationBar.overlayKey) as? UIView
+            return objc_getAssociatedObject(self, &overlayKey) as? UIView
         }
         
         set {
-            objc_setAssociatedObject(self, UINavigationBar.overlayKey, newValue, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+            objc_setAssociatedObject(self, &overlayKey, newValue, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
         }
     }
     
