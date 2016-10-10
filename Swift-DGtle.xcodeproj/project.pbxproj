@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		180B9C721DAA9B1A00695DAC /* SDGSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180B9C711DAA9B1A00695DAC /* SDGSettingViewController.swift */; };
 		181C601F1D702849003356E4 /* Swift_DGtleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181C601E1D702849003356E4 /* Swift_DGtleTests.swift */; };
 		181C602A1D702849003356E4 /* Swift_DGtleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181C60291D702849003356E4 /* Swift_DGtleUITests.swift */; };
 		181C60451D70299B003356E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181C60381D70299B003356E4 /* AppDelegate.swift */; };
@@ -134,6 +135,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		180B9C711DAA9B1A00695DAC /* SDGSettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDGSettingViewController.swift; sourceTree = "<group>"; };
 		181C60061D702849003356E4 /* Swift-DGtle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Swift-DGtle.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		181C601A1D702849003356E4 /* Swift-DGtleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Swift-DGtleTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		181C601E1D702849003356E4 /* Swift_DGtleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Swift_DGtleTests.swift; sourceTree = "<group>"; };
@@ -427,6 +429,7 @@
 			children = (
 				181EB8861D72863F0005B991 /* widget */,
 				181C60741D70307F003356E4 /* SDGMineViewController.swift */,
+				180B9C711DAA9B1A00695DAC /* SDGSettingViewController.swift */,
 			);
 			path = Mine;
 			sourceTree = "<group>";
@@ -747,6 +750,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				180B9C721DAA9B1A00695DAC /* SDGSettingViewController.swift in Sources */,
 				181EB8611D7181470005B991 /* SDGHomeTableHeader.swift in Sources */,
 				18ABBE8C1D9D74F8007DECEC /* SDGroupCard.swift in Sources */,
 				181C60771D703625003356E4 /* UIColorExt.swift in Sources */,

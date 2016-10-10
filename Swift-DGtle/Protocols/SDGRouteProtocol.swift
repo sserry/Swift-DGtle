@@ -19,6 +19,7 @@ enum SDGPageStatus {
     case goBannerTopic(topicID: String)
     case goTopicDetail(topicID: String)
     case goLogin
+    case goSetting
 }
 
 @objc protocol SDGRouteProtocol: class {
@@ -43,6 +44,9 @@ extension SDGRouteProtocol {
         case .goLogin:
             let navVC = SDGNavigationController(rootViewController: SDGLoginViewController())
             present(navVC)
+            break
+        case .goSetting:
+            push(to:  SDGSettingViewController())
             break
         }
     }

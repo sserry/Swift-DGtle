@@ -14,5 +14,10 @@ class SDGBaseViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = GLOBAL_GRAY_LIGHT
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.navigationBar.gg_reset()
+    }
 
 }

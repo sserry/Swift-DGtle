@@ -27,7 +27,8 @@ class SDGLoginViewController: SDGBaseViewController {
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
-        navigationController?.navigationBar.gg_reset()
+        navigationController?.navigationBar.barStyle = .default
+        
     }
 
 }

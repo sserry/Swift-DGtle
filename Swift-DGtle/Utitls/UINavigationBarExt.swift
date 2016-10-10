@@ -37,7 +37,8 @@ extension UINavigationBar {
     }
     
     func gg_reset() {
-        setBackgroundImage(nil, for: .default)
+//        setBackgroundImage(UIImage(named: "nav_bar"), for: .default)
+        shadowImage = nil
         overlay?.removeFromSuperview()
         overlay = nil
     }

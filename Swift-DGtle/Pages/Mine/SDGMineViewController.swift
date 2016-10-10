@@ -27,12 +27,19 @@ class SDGMineViewController: SDGBaseViewController, SDGRouteProtocol {
         setNavigationBar()
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.navigationBar.barStyle = .default
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+    }
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         
-        navigationController?.navigationBar.gg_reset()
-        
+
     }
     
     func setNavigationBar() {
@@ -66,7 +73,7 @@ class SDGMineViewController: SDGBaseViewController, SDGRouteProtocol {
 extension SDGMineViewController {
 
     func settingBtnClicked(_ sender: UIButton ) {
-    
+        go(to: .goSetting)
     }
 }
 

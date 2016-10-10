@@ -9,7 +9,7 @@
 import UIKit
 import SDCycleScrollView
 
-class SDGHomeViewController: SDGBaseViewController {
+class SDGHomeViewController: SDGBaseViewController, SDGRouteProtocol {
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,7 +19,14 @@ class SDGHomeViewController: SDGBaseViewController {
         setTableView()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+//        navigationController?.navigationBar.barStyle = .default
+    }
+    
     func setNavigationBar() {
+        
         navigationItem.titleView = UIImageView(image: UIImage(named: "nav_logo"))
         let searchItem = UIBarButtonItem.barBtnItemWithNmlImg(UIImage(named: "home_search_icon"),
                                                               selImg: UIImage(named: "home_search_icon"),
@@ -52,7 +59,7 @@ class SDGHomeViewController: SDGBaseViewController {
 extension SDGHomeViewController {
     
     func showSearchPage(_ sender: UIButton) {
-    
+        go(to: .goSetting)
     }
     
 }
