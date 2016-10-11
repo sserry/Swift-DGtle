@@ -20,14 +20,12 @@ protocol SDGPageProtocol: class {
 
 extension SDGPageProtocol where Self: UIScrollViewDelegate, Self: UIViewController, Self: ButtonsBarDelegate {
 
+    
     func setupControllers() {
         
         navigationItem.titleView = buttonsBar
         buttonsBar.delegate = self
-        
-        for controller in vcArray {
-            addChildViewController(controller)
-        }
+ 
         automaticallyAdjustsScrollViewInsets = false
         horizentalScrollView.isPagingEnabled = true
         horizentalScrollView.bounces = false
@@ -40,6 +38,7 @@ extension SDGPageProtocol where Self: UIScrollViewDelegate, Self: UIViewControll
         for i in vcArray.indices {
             vcArray[i].view.frame = CGRect(x: CGFloat(i) * SCREEN_WIDTH, y: 0, width: SCREEN_WIDTH, height: SCREEN_HEIGHT)
             horizentalScrollView.addSubview(vcArray[i].view)
+            addChildViewController(vcArray[i])
         }
         horizentalScrollView.contentSize = CGSize(width: SCREEN_WIDTH * CGFloat(vcArray.count), height: horizentalScrollView.gg_h)
         view.addSubview(horizentalScrollView)

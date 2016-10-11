@@ -12,13 +12,18 @@ class SDGMsgLikeChildViewController: SDGBaseViewController, SDGViewControllerEmp
 
     var emptyDataType: SDGEmptyDataType = .like
     
-    var targetTableView: UITableView = SDGTableView(frame: BOUNDS_WITHOUT_NAV_TAB, style: .grouped)
+    var targetTableView: UITableView = SDGTableView(frame: BOUNDS_WITHOUT_NAV_TAB, aDelegete: self as AnyObject)
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         configureEmptyDataView()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        targetTableView.mj_header.beginRefreshing()
+    }
+
 
 }
 

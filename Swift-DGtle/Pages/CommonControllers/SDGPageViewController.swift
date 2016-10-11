@@ -11,17 +11,25 @@ import UIKit
 class SDGPageViewController: UIViewController, SDGPageProtocol {
     
     var buttonsBar = ButtonsBar()
-//    var buttonsBar = ButtonsBar(frame: CGRectMake(0, 0, 180, 44), titlesArray: ["精选", "发现"], buttonMargin: 84)
-//    let leftVC = SDGGroupLeftChildViewController()
-//    let rightVC = SDGGroupRightChildViewController()
     
     var vcArray: [UIViewController] = []
     var curContentX: CGFloat = 0.0
-    var horizentalScrollView = UIScrollView(frame: CGRect(x: 0, y: 0, width: SCREEN_WIDTH, height: SCREEN_HEIGHT))
+    var horizentalScrollView = UIScrollView(frame: SCREEN_SIZE)
+    
+    //  禁用子控制器的自动更新视图 否则会一口气走完所有子控制器的视图加载方法
+    override var shouldAutomaticallyForwardAppearanceMethods: Bool {
+        return false
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupControllers()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        if let idx = buttonsBar.selectedIndex {
+            runApperenceTransition(forIndex: idx)
+        } 
     }
     
     convenience init(bottonBar: ButtonsBar, viewControllers: [UIViewController]) {
@@ -29,10 +37,19 @@ class SDGPageViewController: UIViewController, SDGPageProtocol {
         self.buttonsBar = bottonBar
         self.vcArray = viewControllers
     }
+    
+    ///  手动触发子控制器的视图加载周期
+    ///
+    /// - parameter index: 控制器索引
+    fileprivate func runApperenceTransition(forIndex index: Int) {
+        vcArray[index].beginAppearanceTransition(true, animated: true)
+        vcArray[index].endAppearanceTransition()
+    }
 
 }
 
 extension SDGPageViewController: UIScrollViewDelegate {
+    
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView)  {
         guard scrollView.contentOffset.x.truncatingRemainder(dividingBy: SCREEN_WIDTH) == 0 else {
             return
@@ -56,10 +73,11 @@ extension SDGPageViewController: UIScrollViewDelegate {
 
 extension SDGPageViewController: ButtonsBarDelegate {
     
-    
     func buttonsBarDidSelectedindex(_ index: Int?)  {
         if let idx = index {
             horizentalScrollView.scrollRectToVisible(CGRect(x: CGFloat(idx) * SCREEN_WIDTH, y: 0, width: SCREEN_WIDTH, height: SCREEN_HEIGHT), animated: true)
+            
+            runApperenceTransition(forIndex: idx)
         }
     }
 }

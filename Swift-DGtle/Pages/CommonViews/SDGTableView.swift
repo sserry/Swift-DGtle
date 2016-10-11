@@ -20,9 +20,7 @@ class SDGTableView: UITableView {
         backgroundColor = GLOBAL_GRAY_LIGHT
         tableFooterView = UIView()
         showsVerticalScrollIndicator = false
-        let refreshHeader = SDGRereshHeader(refreshingTarget: self, refreshingAction: #selector(SDGTableView.tableViewDidRefreshed(_:)))
-        
-        mj_header = refreshHeader
+       
         
     }
     
@@ -33,6 +31,9 @@ class SDGTableView: UITableView {
             self.delegate = dlg
             self.dataSource = dsc
         }
+        let refreshHeader = SDGRereshHeader(refreshingTarget: self, refreshingAction: #selector(SDGTableView.tableViewDidRefreshed(_:)))
+        
+        mj_header = refreshHeader
 
     }
     

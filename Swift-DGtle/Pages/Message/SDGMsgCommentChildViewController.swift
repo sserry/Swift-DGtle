@@ -14,8 +14,8 @@ class SDGMsgCommentChildViewController: SDGBaseViewController, SDGViewController
 
     let segBar = SDGSegmentButtonsView(with: CGRect(x: 0, y: NAV_BAR_H, width: SCREEN_WIDTH, height: 49))
     
-    var targetTableView: UITableView = SDGTableView(frame: SDGMsgCommentChildViewController.subviewFrame, style: .grouped)
-    
+    var targetTableView: UITableView = SDGTableView(frame: SDGMsgCommentChildViewController.subviewFrame, aDelegete: self as AnyObject)
+
     var emptyDataType: SDGEmptyDataType {
         return .comment
     }
@@ -23,12 +23,16 @@ class SDGMsgCommentChildViewController: SDGBaseViewController, SDGViewController
     override func viewDidLoad() {
         super.viewDidLoad()
         segBar.delegate = self
-        
         view.addSubview(segBar)
-        
         configureEmptyDataView()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        targetTableView.mj_header.beginRefreshing()
+    }
 
+    
 }
 
 extension SDGMsgCommentChildViewController: SDGSegmentButtonsViewProtocol {

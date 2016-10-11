@@ -80,6 +80,9 @@
 		181EB8961D72AD910005B991 /* SDGUserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 181EB8901D72AD910005B991 /* SDGUserTableViewCell.xib */; };
 		1821E7A91D9A1E0A0049DDB6 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1821E7A81D9A1E0A0049DDB6 /* SnapKit.framework */; };
 		1821E7AA1D9A1E0E0049DDB6 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1821E7A81D9A1E0A0049DDB6 /* SnapKit.framework */; };
+		18225CEC1DABDCA5002A2ACD /* SDGSettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18225CEA1DABDCA5002A2ACD /* SDGSettingTableViewCell.swift */; };
+		18225CED1DABDCA5002A2ACD /* SDGSettingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18225CEB1DABDCA5002A2ACD /* SDGSettingTableViewCell.xib */; };
+		18225CF01DABE1BC002A2ACD /* SDSettingCellItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18225CEF1DABE1BC002A2ACD /* SDSettingCellItem.swift */; };
 		182C364D1D9C1AA000D4BDEE /* SDGroupListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182C364C1D9C1AA000D4BDEE /* SDGroupListView.swift */; };
 		182D44141DA0155500C2FF0E /* SDGMsgEmptyDataView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 182D44131DA0155500C2FF0E /* SDGMsgEmptyDataView.xib */; };
 		182D44161DA0156300C2FF0E /* SDGMsgEmptyDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182D44151DA0156300C2FF0E /* SDGMsgEmptyDataView.swift */; };
@@ -173,6 +176,9 @@
 		181EB8901D72AD910005B991 /* SDGUserTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SDGUserTableViewCell.xib; sourceTree = "<group>"; };
 		1821E7A51D9A1DE40049DDB6 /* Pods_Swift_DGtle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods_Swift_DGtle.framework; path = "../../../../../Library/Developer/Xcode/DerivedData/Swift-DGtle-gfmwkksdxjapliaedscwxviksjhg/Build/Products/Debug-iphonesimulator/Pods_Swift_DGtle.framework"; sourceTree = "<group>"; };
 		1821E7A81D9A1E0A0049DDB6 /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = "../../../../../Library/Developer/Xcode/DerivedData/Swift-DGtle-gfmwkksdxjapliaedscwxviksjhg/Build/Products/Debug-iphonesimulator/SnapKit/SnapKit.framework"; sourceTree = "<group>"; };
+		18225CEA1DABDCA5002A2ACD /* SDGSettingTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDGSettingTableViewCell.swift; sourceTree = "<group>"; };
+		18225CEB1DABDCA5002A2ACD /* SDGSettingTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SDGSettingTableViewCell.xib; sourceTree = "<group>"; };
+		18225CEF1DABE1BC002A2ACD /* SDSettingCellItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDSettingCellItem.swift; sourceTree = "<group>"; };
 		182C364C1D9C1AA000D4BDEE /* SDGroupListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDGroupListView.swift; sourceTree = "<group>"; };
 		182D44131DA0155500C2FF0E /* SDGMsgEmptyDataView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SDGMsgEmptyDataView.xib; sourceTree = "<group>"; };
 		182D44151DA0156300C2FF0E /* SDGMsgEmptyDataView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDGMsgEmptyDataView.swift; sourceTree = "<group>"; };
@@ -427,6 +433,7 @@
 		181C605F1D702A3D003356E4 /* Mine */ = {
 			isa = PBXGroup;
 			children = (
+				18225CEE1DABE1AA002A2ACD /* model */,
 				181EB8861D72863F0005B991 /* widget */,
 				181C60741D70307F003356E4 /* SDGMineViewController.swift */,
 				180B9C711DAA9B1A00695DAC /* SDGSettingViewController.swift */,
@@ -472,8 +479,18 @@
 				181EB8901D72AD910005B991 /* SDGUserTableViewCell.xib */,
 				18B339EE1D73E00A00683893 /* SDGUserUnloginHeader.swift */,
 				18B339F01D73E07800683893 /* SDGUserUnloginHeader.xib */,
+				18225CEA1DABDCA5002A2ACD /* SDGSettingTableViewCell.swift */,
+				18225CEB1DABDCA5002A2ACD /* SDGSettingTableViewCell.xib */,
 			);
 			path = widget;
+			sourceTree = "<group>";
+		};
+		18225CEE1DABE1AA002A2ACD /* model */ = {
+			isa = PBXGroup;
+			children = (
+				18225CEF1DABE1BC002A2ACD /* SDSettingCellItem.swift */,
+			);
+			path = model;
 			sourceTree = "<group>";
 		};
 		182D441A1DA0C1DF00C2FF0E /* GlobalPages */ = {
@@ -654,6 +671,7 @@
 				18857C451D7873450008661B /* SDGGroupTableViewCell.xib in Resources */,
 				181EB8751D719E790005B991 /* SDGHomeTableViewCell.xib in Resources */,
 				18B339F11D73E07800683893 /* SDGUserUnloginHeader.xib in Resources */,
+				18225CED1DABDCA5002A2ACD /* SDGSettingTableViewCell.xib in Resources */,
 				181C60691D702BD2003356E4 /* Podfile in Resources */,
 				181C604E1D70299B003356E4 /* Main.storyboard in Resources */,
 				18EE20461D9AAE1E0084205E /* SDGGroupMoreCellSectionView.xib in Resources */,
@@ -757,6 +775,7 @@
 				18EE20481D9AB2820084205E /* SDGGroupMoreCellSectionView.swift in Sources */,
 				181C606F1D703029003356E4 /* SDGHomeViewController.swift in Sources */,
 				182D441D1DA0C21200C2FF0E /* SDGLoginViewController.swift in Sources */,
+				18225CEC1DABDCA5002A2ACD /* SDGSettingTableViewCell.swift in Sources */,
 				181EB8831D71FF430005B991 /* UINavigationBarExt.swift in Sources */,
 				181EB86D1D7199170005B991 /* EasyDivideLine.swift in Sources */,
 				181EB8721D719E790005B991 /* SDGHomeTableViewCell.swift in Sources */,
@@ -772,6 +791,7 @@
 				182C364D1D9C1AA000D4BDEE /* SDGroupListView.swift in Sources */,
 				181C60611D702A9E003356E4 /* Constants.swift in Sources */,
 				18857C3A1D772E7F0008661B /* SDGMsgPrivateChildViewController.swift in Sources */,
+				18225CF01DABE1BC002A2ACD /* SDSettingCellItem.swift in Sources */,
 				181EB8651D718BAC0005B991 /* UILabelExt.swift in Sources */,
 				181EB87A1D71EEE50005B991 /* HomeArticalModel.swift in Sources */,
 				18EC86AF1D9FE05B00D19546 /* SDGBaseViewController.swift in Sources */,
