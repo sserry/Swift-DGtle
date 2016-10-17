@@ -9,11 +9,15 @@
 import UIKit
 
 class SDGTabController: UITabBarController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        configureViewControllers() 
+        configureViewControllers()
+        
+        if hasRun() != true {
+            showGuide()
+        }
+        
     }
     
     func configureViewControllers() {
@@ -45,6 +49,11 @@ class SDGTabController: UITabBarController {
         
         viewControllers = [homeNavVC, groupNavVC, msgNavVC, mineNavVC]
     }
-
-
+    
+    func showGuide() {
+        let guideView = SDGGuideView()
+        self.view.addSubview(guideView)
+    }
+    
+    
 }

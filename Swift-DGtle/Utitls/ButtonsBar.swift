@@ -26,8 +26,6 @@ class ButtonsBar: UIView {
     var normalColor: UIColor = UIColor.colorWithHexString(stringToConvert: "9A9A9A")
     var selectedColor: UIColor = SDGBlue
     
-    let colorLayer = CALayer()
-    
     fileprivate var barLeftMar: CGFloat {
         return SCREEN_WIDTH - self.gg_w / 2
     }
@@ -52,16 +50,6 @@ class ButtonsBar: UIView {
         underline.backgroundColor = selectedColor
         
         addSubview(underline)
-        
-        
-        
-        buttonsList[0].titleLabel?.sizeToFit()
-        
-        colorLayer.backgroundColor = UIColor.red.cgColor
-        colorLayer.frame = buttonsList[0].frame
-        buttonsList[0].titleLabel?.layer.addSublayer(colorLayer)
-//        colorLayer.mask = (buttonsList[0].titleLabel?.layer)!
-        buttonsList[0].titleLabel?.layer.masksToBounds = true
         
     }
  
@@ -94,8 +82,6 @@ extension ButtonsBar {
     
     func scrollUnderlineXPercentageTo(_ x: CGFloat) {        
         underline.gg_x = underlineRange * x
-        
-        colorLayer.frame.origin.x = buttonsList[0].gg_w * x
     }
     
 }

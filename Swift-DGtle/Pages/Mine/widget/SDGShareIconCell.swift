@@ -8,17 +8,20 @@
 
 import UIKit
 
-class SDGShareIconCell: UITableViewCell {
+class SDGShareIconCell: UITableViewCell, SDTableCellConfigureProtocol {
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    static var cellReuseIdentifier: String {
+        return "SDG_SHARE_ICON_CELL_REUSED_ID"
     }
     
+    static let height: CGFloat = 70
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        addBottomDivideLine()
+        selectionStyle = .none
+    }
+    
+    func updateDataSource(_ modelSource: String) { }
+
 }

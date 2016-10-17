@@ -34,7 +34,6 @@ class SDGNavigationController: UINavigationController {
     
     fileprivate func setupStyle() {
         
-        //这玩意儿全局的
         let navigationBarApperence = UINavigationBar.appearance()
         navigationBarApperence.tintColor = UIColor.colorWithHexString(stringToConvert: "69707a")
         

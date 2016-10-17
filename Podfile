@@ -1,4 +1,4 @@
-platform :ios, '8.0'
+platform :ios, '9.0'
 
 use_frameworks!
 
@@ -8,6 +8,8 @@ pod 'SDWebImage'
 pod 'SDCycleScrollView'
 pod 'SnapKit'
 pod 'MJRefresh'
+pod 'Alamofire', '~> 4.0'
+pod 'SVProgressHUD'
 
 end
 

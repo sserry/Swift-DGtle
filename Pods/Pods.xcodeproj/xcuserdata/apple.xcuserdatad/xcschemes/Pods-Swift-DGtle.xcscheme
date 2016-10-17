@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "DAC8260FDCE92817D7C3432636D887E4"
+               BlueprintIdentifier = "3BAC51E500B821CF971D558821CC5BB3"
                BuildableName = "Pods_Swift_DGtle.framework"
                BlueprintName = "Pods-Swift-DGtle"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "DAC8260FDCE92817D7C3432636D887E4"
+            BlueprintIdentifier = "3BAC51E500B821CF971D558821CC5BB3"
             BuildableName = "Pods_Swift_DGtle.framework"
             BlueprintName = "Pods-Swift-DGtle"
             ReferencedContainer = "container:Pods.xcodeproj">

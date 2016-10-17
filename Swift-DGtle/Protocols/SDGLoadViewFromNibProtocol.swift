@@ -8,9 +8,7 @@
 
 import UIKit
 
-protocol SDGLoadViewFromNibProtocol {
-    
-}
+protocol SDGLoadViewFromNibProtocol {}
 
 extension SDGLoadViewFromNibProtocol where Self: UIView {
     

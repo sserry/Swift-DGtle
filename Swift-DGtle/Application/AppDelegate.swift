@@ -19,7 +19,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window?.rootViewController = SDGTabController()
         window?.makeKeyAndVisible()
+        
+        
+        registerAutomaticallyDismissKeyboard()
+        
         return true
+        
+        
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
