@@ -34,8 +34,17 @@ extension AppDelegate {
         reachabilityManager?.listener = { status in
             switch status {
             case .notReachable:
+                SDGGlobal.shared.networkOK = false
+                HTTP_HEAD.VALUE_WANTYPE = "NotReachable"
                 break
             case .reachable(let networkType):
+                if networkType == .ethernetOrWiFi {
+                    SDGGlobal.shared.networkOK = true
+                    HTTP_HEAD.VALUE_WANTYPE = "ethernetOrWiFi"
+                } else {
+                    SDGGlobal.shared.networkOK = true
+                    HTTP_HEAD.VALUE_WANTYPE = "wwan"
+                }
                 break
             default:
                 break

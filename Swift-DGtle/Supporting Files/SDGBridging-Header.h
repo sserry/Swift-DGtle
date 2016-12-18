@@ -9,6 +9,4 @@
 #ifndef SDGBridging_Header_h
 #define SDGBridging_Header_h
 
-//#import <DZNEmptyDataSet/UIScrollView+EmptyDataSet.h>
-
 #endif /* SDGBridging_Header_h */

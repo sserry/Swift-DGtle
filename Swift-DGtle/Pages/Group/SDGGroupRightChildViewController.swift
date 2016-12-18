@@ -69,8 +69,8 @@ extension SDGGroupRightChildViewController: UITableViewDelegate, UITableViewData
 }
 
 extension SDGGroupRightChildViewController: SDGTableViewDelegate {
-    func refreshTableView(_ tableView: SDGTableView) {
-        delayExcute { tableView.mj_header.endRefreshing() }
+    func refreshTableView(_ tableView: SDGTableView?, completion: ( () -> Void)?) {
+        delayExcute { tableView?.mj_header.endRefreshing() }
     }
 }
 

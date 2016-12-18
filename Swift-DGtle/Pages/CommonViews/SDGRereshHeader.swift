@@ -9,7 +9,7 @@
 import UIKit
 import MJRefresh
 
-class SDGRereshHeader: MJRefreshGifHeader {
+class SDGRefreshHeader: MJRefreshGifHeader {
 
     override func prepare() {
         super.prepare()

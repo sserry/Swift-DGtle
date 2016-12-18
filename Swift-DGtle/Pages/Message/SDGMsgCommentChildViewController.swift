@@ -22,7 +22,9 @@ class SDGMsgCommentChildViewController: SDGBaseViewController, SDGViewController
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        segBar.delegate = self
+        
+        weak var weakself = self
+        segBar.delegate = weakself
         view.addSubview(segBar)
         configureEmptyDataView()
     }
@@ -60,7 +62,7 @@ extension SDGMsgCommentChildViewController: UITableViewDataSource, UITableViewDe
 }
 
 extension SDGMsgCommentChildViewController: SDGTableViewDelegate {
-    func refreshTableView(_ tableView: SDGTableView) {
-        delayExcute { tableView.mj_header.endRefreshing() }
+    func refreshTableView(_ tableView: SDGTableView?, completion: ( () -> Void)?) {
+        delayExcute { tableView?.mj_header.endRefreshing() }
     }
 }

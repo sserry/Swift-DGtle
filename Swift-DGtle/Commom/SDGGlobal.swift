@@ -6,7 +6,7 @@
 //  Copyright © 2016年 luminia. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 struct HTTP_HEAD {
     
@@ -46,4 +46,8 @@ class SDGGlobal {
                                               HTTP_HEAD.KEY_SYSTEMVERSION: HTTP_HEAD.VALUE_SYSTEMVERSION,
                                               HTTP_HEAD.KEY_SYSTEMNAME   : HTTP_HEAD.VALUE_SYSTEMNAME,
                                               HTTP_HEAD.KEY_UDID         : HTTP_HEAD.VALUE_UDID]
+}
+
+struct SDGPlaceHolder {
+    static let BANNER_PLACEHOLDER = UIImage(named: "article_default_new")
 }

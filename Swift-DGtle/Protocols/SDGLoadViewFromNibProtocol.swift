@@ -13,14 +13,14 @@ protocol SDGLoadViewFromNibProtocol {}
 extension SDGLoadViewFromNibProtocol where Self: UIView {
     
     func loadViewFromNib() {
-        if let nib = Bundle.main.loadNibNamed("\(type(of: self))", owner: self, options: nil) {
+        
+        let className = "\(type(of: self))"
+        
+        if let nib = Bundle.main.loadNibNamed(className, owner: nil, options: nil) {
             if let view = nib[0] as? UIView {
                 addSubview(view)
                 view.frame = bounds
             }
-            
-            
         }
-        
     }
 }

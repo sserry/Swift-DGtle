@@ -9,8 +9,8 @@
 import UIKit
 
 @objc protocol SDGTableViewDelegate {
-    func refreshTableView(_ tableView: SDGTableView)
-    @objc optional func tableViewLoadMore()
+    func refreshTableView(_ tableView: SDGTableView?,  completion: ( () -> Void)?)
+    @objc optional func tableViewLoadMore(completion: (_ noMore: Bool) -> Void)
 }
 
 class SDGTableView: UITableView {
@@ -20,18 +20,18 @@ class SDGTableView: UITableView {
         backgroundColor = GLOBAL_GRAY_LIGHT
         tableFooterView = UIView()
         showsVerticalScrollIndicator = false
-       
-        
+
     }
     
     convenience init(frame: CGRect, aDelegete: AnyObject) {
         self.init(frame: frame, style: .grouped)
+        
         if let dlg = aDelegete as? UITableViewDelegate,
             let dsc = aDelegete as? UITableViewDataSource {
             self.delegate = dlg
             self.dataSource = dsc
         }
-        let refreshHeader = SDGRereshHeader(refreshingTarget: self, refreshingAction: #selector(SDGTableView.tableViewDidRefreshed(_:)))
+        let refreshHeader = SDGRefreshHeader(refreshingTarget: self, refreshingAction: #selector(SDGTableView.tableViewDidRefreshed(_:)))
         
         mj_header = refreshHeader
 
@@ -41,11 +41,16 @@ class SDGTableView: UITableView {
 
 extension SDGTableView {
     
-    func tableViewDidRefreshed(_ sender: SDGRereshHeader) {
+    func tableViewDidRefreshed(_ sender: SDGRefreshHeader) {
         
-        if let dlg = delegate as? SDGTableViewDelegate {
-            dlg.refreshTableView(self)
-        } 
+         if let dlg = delegate as? SDGTableViewDelegate {
+            
+            // weak var weakSelf = self
+             dlg.refreshTableView(self) {
+                 sender.endRefreshing()
+                //self?.mj_header.endRefreshing()
+            }
+         }
     }
     
 }

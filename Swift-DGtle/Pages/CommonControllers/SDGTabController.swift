@@ -47,7 +47,7 @@ class SDGTabController: UITabBarController {
         mineVC.tabBarItem = UITabBarItem(title: "我的", image: UIImage(named: "tab_zone"), selectedImage: UIImage(named: "tab_zone_act"))
         let mineNavVC = SDGNavigationController(rootViewController: mineVC)
         
-        viewControllers = [homeNavVC, groupNavVC, msgNavVC, mineNavVC]
+         viewControllers = [homeNavVC, groupNavVC, msgNavVC, mineNavVC]
     }
     
     func showGuide() {

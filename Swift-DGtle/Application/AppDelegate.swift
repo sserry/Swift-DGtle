@@ -23,6 +23,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         registerAutomaticallyDismissKeyboard()
         
+        connectionStatus()
+        
         return true
         
         

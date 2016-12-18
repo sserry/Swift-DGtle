@@ -20,6 +20,7 @@ extension UIView {
      * 与某一个视图等宽 约束顶部间距以及高度
      */
     func gg_equalWidth(withView aView: UIView!, TopOffset offset: CGFloat!, andHeight height: CGFloat!) {
+        
         snp.makeConstraints { (make) in
             make.left.right.equalTo(aView)
             make.height.equalTo(height)

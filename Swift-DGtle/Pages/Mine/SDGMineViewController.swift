@@ -32,16 +32,6 @@ class SDGMineViewController: SDGBaseViewController, SDGRouteProtocol {
         navigationController?.navigationBar.barStyle = .default
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-    }
-    
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
-        
-
-    }
-    
     func setNavigationBar() {
         //触发状态栏上面的字变白
         navigationController?.navigationBar.barStyle = .black

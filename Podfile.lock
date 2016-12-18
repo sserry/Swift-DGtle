@@ -1,30 +1,32 @@
 PODS:
-  - Alamofire (4.0.1)
+  - Alamofire (4.2.0)
+  - Kingfisher (3.2.2)
   - MJRefresh (3.1.12)
   - SDCycleScrollView (1.65):
     - SDWebImage (~> 3.7)
   - SDWebImage (3.8.2):
     - SDWebImage/Core (= 3.8.2)
   - SDWebImage/Core (3.8.2)
-  - SnapKit (3.0.1)
-  - SVProgressHUD (2.0.3)
+  - SnapKit (3.0.2)
+  - SVProgressHUD (2.1.2)
 
 DEPENDENCIES:
   - Alamofire (~> 4.0)
+  - Kingfisher (~> 3.0)
   - MJRefresh
   - SDCycleScrollView
-  - SDWebImage
   - SnapKit
   - SVProgressHUD
 
 SPEC CHECKSUMS:
-  Alamofire: 7682d43245de14874acd142ec137b144aa1dd335
+  Alamofire: aa2e09d871c9160ac53c90e83c68064a94e3dfbe
+  Kingfisher: 821466474ad7ffc375a4aecadfa05068cfed67b3
   MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
   SDCycleScrollView: f72904c77698a7f93a41bcbbc2d78b073bf7326c
   SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
-  SnapKit: f818b8326d45b4e1c777d0ab27b5c0a3624bfdeb
-  SVProgressHUD: b0830714205bea1317ea1a2ebc71e5633af334d4
+  SnapKit: 2e456761aa92d4d4067a7a5594c18769d451a8ad
+  SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
 
-PODFILE CHECKSUM: 591a75120cd580aae9ae5fa778b78d64a7a7dab3
+PODFILE CHECKSUM: b0d58564747d7a58f21c07aee3d177cb7ac8370d
 
 COCOAPODS: 1.1.0.beta.2

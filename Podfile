@@ -4,7 +4,7 @@ use_frameworks!
 
 target "Swift-DGtle" do
 
-pod 'SDWebImage'
+pod 'Kingfisher', '~> 3.0'
 pod 'SDCycleScrollView'
 pod 'SnapKit'
 pod 'MJRefresh'

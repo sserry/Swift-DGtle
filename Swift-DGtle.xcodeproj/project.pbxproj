@@ -104,6 +104,7 @@
 		182D44201DA0C22A00C2FF0E /* SDGSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182D441F1DA0C22A00C2FF0E /* SDGSearchViewController.swift */; };
 		182D44221DA0CDAB00C2FF0E /* UITextFieldExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182D44211DA0CDAB00C2FF0E /* UITextFieldExt.swift */; };
 		1846BEBF1D9ACDA8001BE873 /* SDGroupShowMoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1846BEBE1D9ACDA8001BE873 /* SDGroupShowMoreCell.swift */; };
+		184F1F951E018B6A00483433 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184F1F941E018B6A00483433 /* SwiftyJSON.swift */; };
 		18857C2D1D75D21B0008661B /* SDGGroupLeftChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18857C2C1D75D21B0008661B /* SDGGroupLeftChildViewController.swift */; };
 		18857C2F1D75D2280008661B /* SDGGroupRightChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18857C2E1D75D2280008661B /* SDGGroupRightChildViewController.swift */; };
 		18857C341D771AE70008661B /* SDGPageProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18857C331D771AE70008661B /* SDGPageProtocol.swift */; };
@@ -115,6 +116,7 @@
 		18857C481D7873BC0008661B /* SDGGroupCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18857C471D7873BC0008661B /* SDGGroupCellModel.swift */; };
 		18857C4C1D789D3C0008661B /* SDGPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18857C4B1D789D3C0008661B /* SDGPageViewController.swift */; };
 		18857C4E1D78A1080008661B /* SDGTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18857C4D1D78A1080008661B /* SDGTabController.swift */; };
+		18A929821E0247B6000CAF33 /* SDGApi+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A929811E0247B6000CAF33 /* SDGApi+Helper.swift */; };
 		18ABBE8A1D9D6700007DECEC /* SDGroupCard.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18ABBE891D9D6700007DECEC /* SDGroupCard.xib */; };
 		18ABBE8C1D9D74F8007DECEC /* SDGroupCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18ABBE8B1D9D74F8007DECEC /* SDGroupCard.swift */; };
 		18ABBE8E1D9D7957007DECEC /* SDGLoadViewFromNibProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18ABBE8D1D9D7957007DECEC /* SDGLoadViewFromNibProtocol.swift */; };
@@ -212,6 +214,7 @@
 		182D441F1DA0C22A00C2FF0E /* SDGSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDGSearchViewController.swift; sourceTree = "<group>"; };
 		182D44211DA0CDAB00C2FF0E /* UITextFieldExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextFieldExt.swift; sourceTree = "<group>"; };
 		1846BEBE1D9ACDA8001BE873 /* SDGroupShowMoreCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDGroupShowMoreCell.swift; sourceTree = "<group>"; };
+		184F1F941E018B6A00483433 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		18857C2C1D75D21B0008661B /* SDGGroupLeftChildViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDGGroupLeftChildViewController.swift; sourceTree = "<group>"; };
 		18857C2E1D75D2280008661B /* SDGGroupRightChildViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDGGroupRightChildViewController.swift; sourceTree = "<group>"; };
 		18857C331D771AE70008661B /* SDGPageProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDGPageProtocol.swift; sourceTree = "<group>"; };
@@ -223,6 +226,7 @@
 		18857C471D7873BC0008661B /* SDGGroupCellModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDGGroupCellModel.swift; sourceTree = "<group>"; };
 		18857C4B1D789D3C0008661B /* SDGPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDGPageViewController.swift; sourceTree = "<group>"; };
 		18857C4D1D78A1080008661B /* SDGTabController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDGTabController.swift; sourceTree = "<group>"; };
+		18A929811E0247B6000CAF33 /* SDGApi+Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SDGApi+Helper.swift"; sourceTree = "<group>"; };
 		18ABBE891D9D6700007DECEC /* SDGroupCard.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SDGroupCard.xib; sourceTree = "<group>"; };
 		18ABBE8B1D9D74F8007DECEC /* SDGroupCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDGroupCard.swift; sourceTree = "<group>"; };
 		18ABBE8D1D9D7957007DECEC /* SDGLoadViewFromNibProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDGLoadViewFromNibProtocol.swift; sourceTree = "<group>"; };
@@ -381,6 +385,7 @@
 		181C60441D70299B003356E4 /* Utitls */ = {
 			isa = PBXGroup;
 			children = (
+				184F1F941E018B6A00483433 /* SwiftyJSON.swift */,
 				181EB86C1D7199170005B991 /* EasyDivideLine.swift */,
 				181EB8641D718BAC0005B991 /* UILabelExt.swift */,
 				181EB8621D718AC00005B991 /* LayoutExt.swift */,
@@ -519,6 +524,7 @@
 			isa = PBXGroup;
 			children = (
 				18225D001DB37FED002A2ACD /* SDGApi.swift */,
+				18A929811E0247B6000CAF33 /* SDGApi+Helper.swift */,
 				18225D021DB38009002A2ACD /* Engine */,
 				18225D051DB3805A002A2ACD /* HttpManager */,
 			);
@@ -673,7 +679,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = luminia;
 				TargetAttributes = {
 					181C60051D702849003356E4 = {
@@ -821,6 +827,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				184F1F951E018B6A00483433 /* SwiftyJSON.swift in Sources */,
 				180B9C721DAA9B1A00695DAC /* SDGSettingViewController.swift in Sources */,
 				18225D0F1DB38183002A2ACD /* RequestGenerator.swift in Sources */,
 				181EB8611D7181470005B991 /* SDGHomeTableHeader.swift in Sources */,
@@ -859,6 +866,7 @@
 				181EB87A1D71EEE50005B991 /* HomeArticalModel.swift in Sources */,
 				18EC86AF1D9FE05B00D19546 /* SDGBaseViewController.swift in Sources */,
 				18857C4C1D789D3C0008661B /* SDGPageViewController.swift in Sources */,
+				18A929821E0247B6000CAF33 /* SDGApi+Helper.swift in Sources */,
 				18EC86AD1D9FD17200D19546 /* SDGRouteProtocol.swift in Sources */,
 				18857C2D1D75D21B0008661B /* SDGGroupLeftChildViewController.swift in Sources */,
 				18857C441D7873450008661B /* SDGGroupTableViewCell.swift in Sources */,
@@ -1069,6 +1077,7 @@
 				);
 				INFOPLIST_FILE = "Swift-DGtle/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" \"-DDEBUG\"";
 				PRODUCT_BUNDLE_IDENTIFIER = "luminia.Swift-DGtle";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Swift-DGtle/Supporting Files/SDGBridging-Header.h";
@@ -1088,6 +1097,7 @@
 				);
 				INFOPLIST_FILE = "Swift-DGtle/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" \"-DDEBUG\"";
 				PRODUCT_BUNDLE_IDENTIFIER = "luminia.Swift-DGtle";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Swift-DGtle/Supporting Files/SDGBridging-Header.h";

@@ -45,8 +45,8 @@ extension SDGMsgPrivateChildViewController: UITableViewDataSource, UITableViewDe
 }
 
 extension SDGMsgPrivateChildViewController: SDGTableViewDelegate {
-    func refreshTableView(_ tableView: SDGTableView) {
-        delayExcute { tableView.mj_header.endRefreshing() }
+    func refreshTableView(_ tableView: SDGTableView?, completion: ( () -> Void)?) {
+        delayExcute { tableView?.mj_header.endRefreshing() }
     }
 }
 
